@@ -13,8 +13,8 @@
                 'background': 'rgba(0,0,0,0.75)'
             });
         }
-        //       if($(this).scrollTop() > 500)    $('.button.-pgtop').fadeIn();
-        //       else $('.button.-pgtop').fadeOut();
+               if($(this).scrollTop() > 600)    $('#js-pageTop').fadeIn(100);
+               else $('#js-pageTop').fadeOut(100);
     });
     // $('.offer').click(function(){
     //     $('.offer').css({'borderColor': '#f0f5f9'});
@@ -24,9 +24,12 @@
     // });
     $('#js-newsletter-form').submit(function (e) {
         e.preventDefault();
-        alert("Żądanie do serwera zostało zatrzymane.\nBrak skryptu obsługującego formularz.");
+        alert("Żądanie do serwera zostało zatrzymane.\nBrak skryptu obsługującego formularz.\nZa utrudnienia przepraszamy.\nTeam REVO STUDIO");
     });
     $('#js-contact-us-form').submit(function (e) {
+        confirm('Wysłać wiadomość ?');
         e.preventDefault();
-        alert("Żądanie do serwera zostało zatrzymane.\nBrak skryptu obsługującego formularz.");
+        alert("Żądanie do serwera zostało zatrzymane.\nBrak skryptu obsługującego formularz.\nZa utrudnienia przepraszamy.\nTeam REVO STUDIO");
     });
+
+

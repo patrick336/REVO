@@ -44,6 +44,16 @@
     .btn-custom-3 {
         margin: 5px;
     }
+	.creative-design i.fa {
+		height: 65px;
+    	width: 65px;
+    	line-height: 65px;
+    	font-size: 160%;
+	}
+	.creative-design h3,
+	.creative-design p {
+		font-size: 14px;
+	}
 }
 
 @media screen and (min-width: 768px) {
@@ -83,6 +93,11 @@
     .col-sm-12 {
         width: 100%;
     }
+/*Add space between sections*/
+    section .container {
+        margin: 70px auto;
+    }
+/*NAVIGATION*/
     .hamburger {
         display: none;
     }
@@ -97,6 +112,7 @@
         float: left;
 /*        display: block;*/
     }
+/*SECTION JUMBOTRON*/
     .hero-content h1 {
         font-size: 60px;
     }
@@ -106,18 +122,29 @@
     .web-agency h1 {
 	    font-size: 150%;
     }
-    #newsletter,
-    .btn-custom-5 {
-        margin: 0;
+	.image-1,
+	.image-2 {
+		display: block;
+	}  
+	.creative-design h3{
+		font-size: 18px;
+	}
+	.creative-design .box  {
+/*		margin: 30px auto;*/
+	}
+    .person p {
+        font-size: 13px;
     }
-
+	.footer-wrap {
+		max-width: 650px;
+	}
 }
 
 @media screen and (min-width: 922px) {
     .col-md-1 {
         width: 8.33%;
     }
-    .col-md2 {
+    .col-md-2 {
         width: 16.66%;
     }
     .col-md-3 {
@@ -159,8 +186,27 @@
     .icon-wrapper p{
 	    font-size: 15px;
     }
+    .btn-custom-5 {
+	    margin: 0;
+    }
+    .person p {
+        font-size: 14px;
+    }
+	.creative-design .box {
+		margin: 5px auto;
+	}
+	.footer-wrap {
+		max-width: 900px;
+	}
+	#newsletter {
+		margin: 0;
+	}
 }
-
+@media screen and (min-width:1024px) {
+	.creative-design .box {
+		margin: 15px auto;
+	}
+}
 @media screen and (min-width:1200px) {
     .col-lg-1 {
         width: 8.33%;
@@ -198,102 +244,12 @@
     .col-lg-12 {
         width: 100%;
     }
+	.creative-design .box {
+		margin: 45px auto;
+	}
+	.footer-wrap {
+		max-width: 1200px;
+	}
 }
 
 
-/*@media (max-width: 767px) {*/
-
-
-/* For tablets: */
-
-
-/*
-    .col-s-1 {
-        width: 8.33%;
-    }
-    .col-s-2 {
-        width: 16.66%;
-    }
-    .col-s-3 {
-        width: 25%;
-    }
-    .col-s-4 {
-        width: 33.33%;
-    }
-    .col-s-5 {
-        width: 41.66%;
-    }
-    .col-s-6 {
-        width: 50%;
-    }
-    .col-s-7 {
-        width: 58.33%;
-    }
-    .col-s-8 {
-        width: 66.66%;
-    }
-    .col-s-9 {
-        width: 75%;
-    }
-    .col-s-10 {
-        width: 83.33%;
-    }
-    .col-s-11 {
-        width: 91.66%;
-    }
-    .col-s-12 {
-        width: 100%;
-    }
-*/
-
-
-/*}*/
-
-
-/*@media (min-width: 768px) {*/
-
-
-/*     For desktop: */
-
-
-/*
-    .col-m-1 {
-        width: 8.33%;
-    }
-    .col-m-2 {
-        width: 16.66%;
-    }
-    .col-m-3 {
-        width: 25%;
-    }
-    .col-m-4 {
-        width: 33.33%;
-    }
-    .col-m-5 {
-        width: 41.66%;
-    }
-    .col-m-6 {
-        width: 50%;
-    }
-    .col-m-7 {
-        width: 58.33%;
-    }
-    .col-m-8 {
-        width: 66.66%;
-    }
-    .col-m-9 {
-        width: 75%;
-    }
-    .col-m-10 {
-        width: 83.33%;
-    }
-    .col-m-11 {
-        width: 91.66%;
-    }
-    .col-m-12 {
-        width: 100%;
-    }
-*/
-
-
-/*}*/
