@@ -63,39 +63,6 @@ turkusowuy #1EAA97
 */
 
 
-/* FONT AWESOME
-
-<i class="fa fa-magic" aria-hidden="true"></i>
-<i class="fa fa-fire" aria-hidden="true"></i>
-<i class="fa fa-flask" aria-hidden="true"></i>
-<i class="fa fa-leaf" aria-hidden="true"></i>
-<i class="fa fa-code" aria-hidden="true"></i>
-<i class="fa fa-signal" aria-hidden="true"></i>
-<i class="fa fa-paper-plane" aria-hidden="true"></i>
-<i class="fa fa-cogs" aria-hidden="true"></i>
-<i class="fa fa-flag-o" aria-hidden="true"></i>
-<i class="fa fa-desktop" aria-hidden="true"></i>
-<i class="fa fa-bullseye" aria-hidden="true"></i>
-<i class="fa fa-pencil" aria-hidden="true"></i>
-<i class="fa fa-usd" aria-hidden="true"></i>
-<i class="fa fa-times" aria-hidden="true"></i>
-<i class="fa fa-check" aria-hidden="true"></i>
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-<i class="fa fa-angle-right" aria-hidden="true"></i>
-<i class="fa fa-angle-left" aria-hidden="true"></i>
-<i class="fa fa-envelope-o" aria-hidden="true"></i>
-<i class="fa fa-map-marker" aria-hidden="true"></i>
-<i class="fa fa-facebook" aria-hidden="true"></i>
-<i class="fa fa-twitter" aria-hidden="true"></i>
-<i class="fa fa-youtube-play" aria-hidden="true"></i>
-<i class="fa fa-pinterest" aria-hidden="true"></i>
-<i class="fa fa-google-plus" aria-hidden="true"></i>
-<i class="fa fa-copyright" aria-hidden="true"></i>
-<i class="fa fa-bars" aria-hidden="true"></i>
-
-*/
-
-
 /***********************
   * UNIVERSAL CLASSES !
 ***********************/
@@ -119,10 +86,9 @@ body {
 }
 
 .mini-container {
-	max-width: 700px;
-	width: 90%;
+	max-width: 600px;
+	width: 95%;
 	margin: 0 auto;
-	/*	padding: 10px 0;*/
 }
 
 .row:before,
@@ -133,7 +99,8 @@ body {
 }
 
 section .container {
-	margin: 10px auto;
+	margin: 0 auto;
+	padding: 10px 0;
 }
 
 [class*="col"] {
@@ -147,7 +114,6 @@ a:visited,
 a:focus {
 	color: white;
 	text-decoration: none;
-	/*    text-transform: uppercase;*/
 }
 
 p {
@@ -175,28 +141,56 @@ img {
 }
 
 
+/*MAIN TEXT & PARAGRAPHS */
+
+.main-text {
+	font-size: 16px;
+}
+
+.main-paragraphs {
+	font-size: 13px;
+}
+
+
 /* PATTERN */
 
 .pattern {
-	width: 50px;
-	height: 1px;
-	background: #67d5b5;
-	text-align: center;
-	margin: 20px auto;
+	margin: 30px auto 20px;
+	display: block;
+	width: 63px;
+	position: relative;
+	height: 9px;
+	overflow: hidden;
 }
 
 .circle {
-	position: relative;
-	height: 7px;
-	width: 7px;
-	display: inline-block;
-	background: #67d5b5;
+	width: 9px;
+	height: 9px;
 	border-radius: 100%;
-	bottom: 10px;
+	background: #67d5b5;
+	display: inline-block;
+	position: absolute;
 }
 
-.center-block {
-	margin: 30px auto;
+.circle-1 {
+	left: 12px
+}
+
+.circle-2 {
+	left: 27px;
+	right: 27px;
+}
+
+.circle-3 {
+	right: 12px;
+}
+
+.bar {
+	height: 1px;
+	width: 63px;
+	background: #67d5b5;
+	position: absolute;
+	top: 4px;
 }
 
 
@@ -216,6 +210,7 @@ img {
 	padding: 10px 15px;
 	border: none;
 	cursor: pointer;
+	outline: none;
 	text-transform: uppercase;
 }
 
@@ -268,6 +263,7 @@ img {
 	margin: 0 auto;
 	transition: all .3s ease-in-out;
 }
+
 .btn-custom-5:hover,
 .btn-custom-5:focus {
 	transform: scale(1.1);
@@ -275,35 +271,37 @@ img {
 
 .box {
 	position: relative;
-	margin: 30px auto;
 	min-height: 65px;
-	padding: 0 10px;
-	overflow: hidden;
+	/*	overflow: hidden;*/
 }
 
 .description {
-	padding-left: 75px;
+	padding-left: 80px;
 	word-wrap: break-word;
 	text-align: left;
 }
+
 .pgtop {
-    position: fixed;
-    bottom: 100px;
-    right: 30px; 
-    text-align: center;
-    line-height: 40px;
-    height: 40px;
-    width: 40px;
-    background: #141414;
-    display: none;
-    border-radius: 3px;
-    cursor: pointer;
-    transition: all 0.3s linear;
+	position: fixed;
+	bottom: 50px;
+	right: 20px;
+	text-align: center;
+	line-height: 30px;
+	border-radius: 2px;
+	height: 30px;
+	width: 30px;
+	background: rgba(0, 0, 0, 0.8);
+	display: none;
+	cursor: pointer;
+	transition: all 0.3s linear;
 }
+
 .pgtop:hover i.fa,
 .pgtop:focus i.fa {
 	color: #67d5b5;
 }
+
+
 /*************************************************************/
 
 
@@ -363,7 +361,7 @@ nav ul > li > a {
 	transition: all 0.1s linear;
 	display: block;
 	text-align: center;
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	font-weight: 600;
 	text-transform: capitalize;
 }
@@ -379,6 +377,7 @@ nav ul > li > a {
 	color: #fff;
 	font-weight: 900;
 	font-size: 20px;
+	cursor: pointer;
 }
 
 
@@ -387,7 +386,6 @@ nav ul > li > a {
 ***************************/
 
 .hero {
-	/*    margin: 0;*/
 	position: relative;
 	width: 100%;
 	min-height: 100vh;
@@ -435,16 +433,10 @@ nav ul > li > a {
     * SECTION FEATURES
 ****************************/
 
-.web-agency h1 {
-	padding: 15px 3px;
-}
-
-.web-agency p {
-	font-size: 15px;
-}
-
 .icon-wrapper {
 	padding: 15px;
+	max-width: 400px;
+	margin: 50px auto;
 }
 
 .icon-wrapper .fa {
@@ -460,12 +452,7 @@ nav ul > li > a {
 .icon-wrapper p {
 	font-size: 13px;
 	word-wrap: break-word;
-	font-weight: 600;
 	color: #3b4047;
-}
-
-.icon-wrapper .pattern {
-	/*    margin: 50px auto;*/
 }
 
 .portfolio .pattern {
@@ -478,25 +465,32 @@ nav ul > li > a {
 ****************************/
 
 .photo {
-	/*	float: left;*/
-	background: center/contain no-repeat;
-	height: 50vh;
-	max-height: 448px;
-	max-width: 391px;
-	margin: auto;
+	max-width: 340px;
+	margin: 10px auto;
+	padding: 2%;
 }
 
+.photo img {
+	-webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
+	box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
+	margin: 0 auto;
+}
+
+
+/*
 .photo-1 {
-	background-image: url(../images/slices/Mobile/team-2.jpg);
+	background-image: url(../images/slices/Mobile/team-1.jpg);
 }
 
 .photo-2 {
-	background-image: url(../images/slices/Mobile/team-1.jpg);
+	background-image: url(../images/slices/Mobile/team-2.jpg);
 }
 
 .photo-3 {
 	background-image: url(../images/slices/Mobile/team-3.jpg);
 }
+*/
 
 
 /*****************************
@@ -505,19 +499,11 @@ nav ul > li > a {
 
 .creative-design {
 	background-color: #f0f5f9;
+	text-align: left;
 }
 
 .creative-design .box {
-	padding: 0;
-}
-
-.creative-design h3 {
-	text-align: left;
-	font-size: 14px;
-}
-
-.creative-design h6 {
-	margin: 0;
+	margin-top: 7%;
 }
 
 .creative-design i.fa {
@@ -536,29 +522,188 @@ nav ul > li > a {
 
 .description h6 {
 	margin: 0px;
-	font-size: 13px;
+	font-size: 12px;
 }
 
-.creative-design p {
-	font-size: 13px;
-	text-align: left;
+.skill-text {
+	font-size: 12px;
 }
 
 .loading-container {
-	width: 85%;
-	max-width: 500px;
+	max-width: 550px;
+	height: 35px;
+	margin-bottom: 3%;
+	overflow: hidden;
+}
+
+.skills {
+	padding: 5% 0;
+}
+
+.skill-header {
+	font-size: 15px;
+	margin-top: 0;
+}
+
+.skill-title {
+	text-align: left;
+	width: 80%;
+}
+
+.skill-percent {
+	text-align: right;
+	width: 20%;
+}
+
+.percent-loading {
+	position: absolute;
+	height: 100%;
+	background: #67d5b5;
+	border-radius: 3px;
+}
+
+.js-percent-loading {
+	width: 0%;
+	-webkit-animation: load 1s ease-out 1 forwards paused;
+	/*Safari 4+ */
+	-moz-animation: load 1s ease-out 1 forwards paused;
+	/* Fx 5+ */
+	-o-animation: load 1s ease-out 1 forwards paused;
+	/* Opera 12+ */
+	animation: load 1s ease-out 1 forwards paused;
+	/* IE 10+, Fx*/
+	/*   animation: name duration timing-function delay iteration-count direction fill-mode play-state; */
 }
 
 .loading {
+	width: 100%;
 	height: 10px;
-	background: #67d5b5;
-	width: 0%;
-	border-radius: 5px;
+	position: relative;
+	top: 25px;
+}
+
+.label {
+	position: relative;
+	top: -200%;
+}
+
+.js-label {
+	opacity: 0;
+	-webkit-animation: fadeIn .5s ease-in-out 1.s 1 normal forwards paused;
+	/*Safari 4+ */
+	-moz-animation: fadeIn .5s ease-in-out 1.1s 1 normal forwards paused;
+	/* Fx 5+ */
+	-o-animation: fadeIn .5s ease-in-out 1.1s 1 normal forwards paused;
+	/* Opera 12+ */
+	animation: fadeIn .5s ease-in-out 1.1s 1 normal forwards paused;
+	/* IE 10+, Fx*/
+}
+
+.label > div {
+	float: left;
+}
+
+.label p {
+	margin: 0;
+	font-size: 11px;
+	text-transform: uppercase;
+	font-weight: 600;
 }
 
 .image-1,
 .image-2 {
 	display: none;
+}
+
+
+/*KEYFRAMES BARS */
+
+@-webkit-keyframes load {
+	0% {
+		width: 0%;
+	}
+	100% {
+		width: 100%;
+	}
+}
+
+@-moz-keyframes load {
+	0% {
+		width: 0%;
+	}
+	100% {
+		width: 100%;
+	}
+}
+
+@-o-keyframes load {
+	0% {
+		width: 0%;
+	}
+	100% {
+		width: 100%;
+	}
+}
+
+@keyframes load {
+	0% {
+		width: 0%;
+	}
+	100% {
+		width: 100%;
+	}
+}
+
+#design {
+	width: 80%;
+}
+
+#development {
+	width: 35%;
+}
+
+#team-work {
+	width: 75%;
+}
+
+#photography {
+	width: 99%;
+}
+
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-o-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 
@@ -568,12 +713,8 @@ nav ul > li > a {
 
 .statistics {
 	background: #67d5b5;
-	color: white;
+	color: #fff;
 	padding: 20px 0;
-}
-
-.statistics container {
-	max-width: 800px;
 }
 
 .statistics h1 {
@@ -591,28 +732,30 @@ nav ul > li > a {
 	color: #67d5b5;
 	position: absolute;
 	left: 10px;
-	top: 0;
+	top: 5px;
 	width: 60px;
 	height: 60px;
 	font-size: 36px;
 	text-align: center;
 }
+
 .choose-us h5 {
 	margin: 0;
 }
-.choose-us p {
-	font-size: 14px;
+.choose-us .box {
+	margin: 35px 5px 0;
 }
-
+.choose-us .description p {
+	font-size: 13px;	
+}
 
 /************************
   * MANAGERS
 ************************/
 
 .our-testimonials {
-	background: #1a1a1a;
+	background: #1a1a1a url('../images/mountaing-rude.jpeg') bottom center/cover no-repeat fixed;
 	color: #fff;
-	padding-bottom: 50px;
 }
 
 .members {
@@ -648,10 +791,9 @@ nav ul > li > a {
 }
 
 .dots {
-	background-color: inherit;
 	width: 150px;
 	text-align: center;
-	margin: 10px auto 0;
+	margin: 50px auto;
 }
 
 .dot {
@@ -721,16 +863,6 @@ nav ul > li > a {
 	font-family: 'Ubuntu', sans-serif;
 }
 
-
-/*
-.top-content i.fa {
-    position: relative;
-    bottom: 25px;
-    left: 5px;
-    font-size: 22px;
-}
-*/
-
 .price {
 	display: inline-block;
 	font-weight: 900;
@@ -787,22 +919,18 @@ nav ul > li > a {
  * SECTION OUR BLOG
 ***********************/
 
-.our-blog [class*='col'] {
-}
-
 .blog-sliders {
-	max-width: 340px;
-	margin: 10px auto;
+	max-width: 339px;
+	margin: 20px auto;
 	width: 95%;
 	position: relative;
 	overflow: hidden;
-/*	height: 340px;*/
 }
 
 .blog-sliders img {
-/*	position: absolute;		*/
 	border-radius: 3px;
 }
+
 .tag {
 	width: 45px;
 	height: 45px;
@@ -811,7 +939,7 @@ nav ul > li > a {
 	right: 0;
 	position: absolute;
 	color: #fff;
-	font-weight: 700;	
+	font-weight: 700;
 	z-index: 100;
 	border-top-right-radius: 3px;
 }
@@ -821,11 +949,11 @@ nav ul > li > a {
 	font-size: 12px;
 }
 
-
 .blog-sliders:hover .next,
 .blog-sliders:focus .next {
 	opacity: 1;
 }
+
 .blog-sliders:hover .prev,
 .blog-sliders:focus .prev {
 	opacity: 1;
@@ -835,7 +963,8 @@ nav ul > li > a {
 .next {
 	cursor: pointer;
 	position: absolute;
-	top: 47%;
+	top: 50%;
+	transform: translateY(-50%);
 	width: 40px;
 	height: 40px;
 	line-height: 40px;
@@ -871,15 +1000,16 @@ nav ul > li > a {
 }
 
 a.btn-read-more {
-    padding: 10px;
-    color: #67d5b5;
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 900;
-    cursor: pointer;
-    font-family: 'Ubuntu',sans-serif;
+	padding: 10px;
+	color: #67d5b5;
+	font-size: 13px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 900;
+	cursor: pointer;
+	font-family: 'Ubuntu', sans-serif;
 }
+
 
 /***********************
    * CONTACT US
@@ -904,11 +1034,11 @@ a.btn-read-more {
 }
 
 .contact-us p {
-	font-size: 12px;
+	font-size: 11px;
 }
 
 .contact-us .box {
-	margin: 0 auto 5px;
+	/*	margin: 0 auto 5px;*/
 	height: 100px;
 }
 
@@ -1044,11 +1174,13 @@ footer [class*='col'] {
 	padding: 10px;
 	min-height: 250px;
 }
+
 .footer-wrap {
 	width: 100%;
 	max-width: 360px;
 	margin: 0 auto;
 }
+
 footer p {
 	margin: 0;
 	padding: 0 10px;
@@ -1142,8 +1274,8 @@ a.social-links {
 	text-align: center;
 }
 
-a.social-links:hover,
-a.social-links:focus {
+.social-links:hover,
+.social-links:focus {
 	transform: scale(1.1);
 }
 

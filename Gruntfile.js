@@ -7,23 +7,23 @@ module.exports = function (grunt) {
             },
             dist: {
                 files: {
-                    'css/style.css': 'sass/style.sass'
+                    'css/style-test.css': 'sass/style-test.sass',
                 }
             }
         },
-
+        
 
         imagemin: {
             dynamic: {
                 files: [{
-                    expand: true,
-                    cwd: 'images/',
-                    src: ['**/*.{png,jpg,jpeg,gif}'],
+                    expand: true, 
+                    cwd: 'images/', 
+                    src: ['**/*.{png,jpg,jpeg,gif}'], 
                     dest: 'images/build/'
                 }]
             }
         },
-
+        
         watch: {
             scripts: {
                 files: ['sass/*.sass'],
@@ -31,7 +31,7 @@ module.exports = function (grunt) {
                 options: {
                     spawn: false,
                 },
-            }
+            } 
         },
 
         browserSync: {
@@ -39,8 +39,7 @@ module.exports = function (grunt) {
                 bsFiles: {
                     src: [
                         "css/*.css",
-                        "*.html",
-                        "js/*.js"
+                        "*.html"
                     ]
                 },
                 options: {
@@ -53,7 +52,7 @@ module.exports = function (grunt) {
         }
     });
 
-    // Load the plugins tasks
+    // Load the plugins tasks 
     grunt.loadNpmTasks('grunt-sass');
 //    grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-watch');

@@ -43,15 +43,7 @@
 		current = $(this).attr('data-tmp');
 		change();
 	});
-	var progress = $('#loading-container > .loading ');
-	var precent = 100 + '%';
 
-	function loadSkills(percent) {
-		progress.animate({
-			width: percent
-		}, 1000);
-	}
-	loadSkills(88);
 
 /////////// 	BLOG SLIDERS ANIMATION   //////////////////////////
 
@@ -81,7 +73,7 @@
 	var pos=0;
 ////////////////////// Funkcje  /////////////////
 	
-	setSlider();
+
 
 
 	function setSlider() {
@@ -90,7 +82,13 @@
 			$(value).attr('data-index',index);
 		});
 	}
-
+	function setImage () {
+	 	var indexImage = $('.blog-sliders > img');
+	 	indexImage.each(function (index,value){
+	 		$(value).attr('indexImage',0);
+	 	});
+	}
+	
 	function fade ($element,nrSlider,pos){
 		
 		var imgPath = data.slider[nrSlider].position[pos].src;
@@ -101,15 +99,25 @@
 			$(this).attr({ 
 				src: imgPath,
 				title: imgTitle,
-				alt: imgAlt
+				alt: imgAlt,
+				'indexImage': pos
 			}).fadeIn('slow'); 
 		});
 	}
 
+// Wywołanie funkcji
+
+	setSlider();
+	setImage();
+
+
+
+
 ///////////////   Nasłuchiwanie zdarzeń ////////////////////////////
 	
 	$('.next').click(function () {
-		
+		//Aktualna pozycja na ekranie
+		var pos = $(this).siblings('img').attr('indexImage');
 		//Pozycja następnego zdjęcia.
 		pos++;
 		//Pobieramy index slajdu ,który się uakywnił.
@@ -126,6 +134,8 @@
 
 	$('.prev').click(function () {
 		
+		//Aktualna pozycja na ekranie
+		var pos = $(this).siblings('img').attr('indexImage');
 		//Pozycja poprzedniego zdjęcia.
 		pos--;
 		//Pobieramy index slajdu ,który się uakywnił.
@@ -148,17 +158,17 @@ var data =  {
 		{
 			"position" : [
 				{
-					"src" : "../images/sliders-images/photo-1.jpeg",
+					"src" : "./images/sliders-images/photo-1.jpeg",
 					"title" : "photo-1",
 					"alt" : "photo-1"
 				},
 				{
-					"src" : "../images/sliders-images/photo-2.jpeg",
+					"src" : "./images/sliders-images/photo-2.jpeg",
 					"title" : "photo-2",
 					"alt" : "photo-2"
 				},
 				{
-					"src" : "../images/sliders-images/photo-3.jpeg",
+					"src" : "./images/sliders-images/photo-3.jpeg",
 					"title" : "photo-3",
 					"alt" : "photo-3"
 				}
@@ -167,17 +177,17 @@ var data =  {
 		{
 			"position" : [
 				{
-					"src" : "../images/sliders-images/photo-4.jpeg",
+					"src" : "./images/sliders-images/photo-4.jpeg",
 					"title" : "photo-4",
 					"alt" : "photo-4"
 				},
 				{
-					"src" : "../images/sliders-images/photo-5.jpeg",
+					"src" : "./images/sliders-images/photo-5.jpeg",
 					"title" : "photo-5",
 					"alt" : "photo-5"
 				},
 				{
-					"src" : "../images/sliders-images/photo-6.jpeg",
+					"src" : "./images/sliders-images/photo-6.jpeg",
 					"title" : "photo-6",
 					"alt" : "photo-6"
 				}
@@ -186,17 +196,17 @@ var data =  {
 		{
 			"position" : [
 				{
-					"src" : "../images/sliders-images/photo-7.jpeg",
+					"src" : "./images/sliders-images/photo-7.jpeg",
 					"title" : "photo-7",
 					"alt" : "photo-7"
 				},
 				{
-					"src" : "../images/sliders-images/photo-8.jpeg",
+					"src" : "./images/sliders-images/photo-8.jpeg",
 					"title" : "photo-8",
 					"alt" : "photo-8"
 				},
 				{
-					"src" : "../images/sliders-images/photo-9.jpeg",
+					"src" : "./images/sliders-images/photo-9.jpeg",
 					"title" : "photo-9",
 					"alt" : "photo-9"
 				}
