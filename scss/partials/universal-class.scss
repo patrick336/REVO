@@ -1,0 +1,362 @@
+// ----
+// Sass (v3.4.21)
+// Compass (v1.0.3)
+// ----
+// ----
+// Sass (v3.4.22)
+// Compass (v1.0.3)
+// ----
+
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans|Roboto:400,700|Rubik|Ubuntu');
+@import 'https://fonts.googleapis.com/css?family=Black+Ops+One|Cormorant:400,700|Inconsolata:400,700|Montserrat:400,700|Open+Sans:400,700|Raleway:400,700,900|Roboto:400,700,700i,900,900i|Source+Sans+Pro:400,700|Ubuntu:400,700,700i&subset=latin-ext';
+
+//maxWidth Container
+$maxWidthSite: 1200px;
+
+//Images
+$image-jumbotron: '../images/meeting-1280-853.jpg';
+$image-testimonials: '../images/mountaing-rude.jpeg';
+$image-contact-form: '../images/mountains-1280-853.jpeg';
+
+// Colours of the project
+$dirty-white: #f0f5f9;
+$black1: #1a1a1a;
+$black2: #141414;
+$white: #fff;
+$light-cyan: #67d5b5;
+$lightgray: #9E9E9E;
+
+//Inputs colours
+$orange: rgb(255, 152, 0);
+$orange-with-opacity: rgba(255, 152, 0, 0.2);
+$green: rgb(85, 238, 112);
+$green-with-opacity: rgba(0, 255, 0, 0.2);
+
+//Fonts
+$Ubuntu: "Ubuntu", sans-serif ;
+$Verdana: "Verdana", sans-serif;
+$Lato: "Lato", sans-serif;
+$Montserrat: "Montserrat", sans-serif;
+$OpenSans: "Open Sans", sans-serif;
+
+//Breakpoints
+$XS: 'screen and (min-width: 480px)';
+$S: 'screen and (min-width: 768px)';
+$M:'screen and (min-width: 922px)';
+$L:'screen and (min-width:1024px)';
+$XL: 'screen and (min-width:1200px)'; 
+
+//Mixins
+@mixin transform($transforms) {
+    -moz-transform: $transforms;
+    -o-transform: $transforms;
+    -ms-transform: $transforms;
+    -webkit-transform: $transforms;
+    transform: $transforms;
+}
+@mixin boxShadow ($horizontal, $vertical, $blur, $spread, $opacity) {
+    -webkit-box-shadow: $horizontal $vertical $blur $spread $opacity;
+    -moz-box-shadow: $horizontal $vertical $blur $spread $opacity;
+    box-shadow: $horizontal $vertical $blur $spread $opacity;
+}
+@mixin borderRadius ($icon-radius) {
+    -webkit-border-radius: $icon-radius;
+    -moz-border-radius: $icon-radius;
+    -ms-border-radius: $icon-radius;
+    border-radius: $icon-radius;
+}
+@mixin icon-ctrl ($size, $font-size, $color-text) {
+    height: $size;
+    width: $size;
+    line-height: $size;
+    font-size: $font-size;
+    color: $color-text;
+}
+@mixin trans($property, $duration, $effect) {
+    -moz-transition: $property $duration $effect;
+    -webkit-transition: $property $duration $effect;
+    transition: $property $duration $effect;
+}
+@mixin keyframe($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content
+    }
+    @-o-keyframes #{$animation-name} {
+        @content
+    }
+    @keyframes #{$animation-name} {
+        @content
+    }
+}
+@mixin animation ($animation, $duration, $timing, $delay,$fill-mode, $play-state) {
+    -webkit-animation: $animation $duration $timing $delay $fill-mode $play-state;
+    -moz-animation: $animation $duration $timing $delay $fill-mode $play-state;
+    -o-animation: $animation $duration $timing $delay $fill-mode $play-state;
+    animation: $animation $duration $timing $delay $fill-mode $play-state;
+}
+@mixin smartphone {
+  @media #{$smartphone} {
+    @content;
+  }
+}
+@mixin tablet {
+  @media #{$tablet} {
+    @content;
+  }
+}
+@mixin iPad {
+  @media #{$Ipad} {
+    @content;
+  }
+}
+@mixin desktop {
+  @media #{$desktop} {
+    @content;
+  }
+}
+
+
+/////////////////////////////////////////
+
+* { 
+	box-sizing: border-box; 
+} 
+
+body {  
+	margin: 0; 
+	text-align: center; 
+} 
+
+.container {  
+	width: 100%; 
+	max-width: $maxWidthSite;
+	margin: 0 auto; 
+}
+
+.mini-container {  
+	max-width: 600px; 
+	width: 95%; 
+	margin: 0 auto; 
+}
+
+.row {
+  &:before,
+  &:after {  
+	  content: ""; 
+	  display: table; 
+	  clear: both;
+  }
+}
+
+section .container {  
+	margin: 0 auto ;
+	padding: 10px 0 ;
+	
+	@media #{$XS} { 
+	  margin: 0 auto;
+	  padding: 70px 0;
+	}
+} 
+
+[class*="col"]  {
+	min-height: 1px; 
+	width: 100%;  
+	float: left;
+}
+ 
+a {
+  &:link,
+  &:visited,
+  &:focus {  
+	  color: $white; 
+	  text-decoration: none;
+	  cursor: pointer;
+  }
+}
+
+p {  
+	font-family: $Lato ;
+} 
+
+span  {
+	color: $light-cyan; 
+}
+
+img  {
+	max-width: 100%; 
+	height: auto; 
+	display: block; 
+}
+
+ul,ol {
+	margin: 0; 
+	padding: 0; 
+	list-style-type: none;
+}
+
+// ALL HEADERS
+
+.headers  {
+	font-family: $Ubuntu;
+	font-weight: 900 ;
+	text-transform: uppercase; 
+	letter-spacing: 2px ;
+}
+
+
+// MAIN TEXT & PARAGRAPHS 
+
+.main-text  {
+	font-size: 16px;
+	
+	@media #{$XS} { font-size: 130%;}
+	@media #{$S} { font-size: 150%;}
+}
+
+.main-paragraphs  {
+	font-size: 13px;
+	
+	@media #{$XS} { font-size: 14px;}
+	@media #{$S} { font-size: 15px;}
+}
+
+
+// PATTERN 
+
+.pattern  {
+	margin: 40px auto 20px ;
+	display: block ;
+	width: 63px ;
+	position: relative ;
+	height: 9px ;
+	overflow: hidden ;
+}
+.circle {  
+	width: 9px ;
+	height: 9px ;
+	@include borderRadius(100%);
+	background: $light-cyan; 
+	display: inline-block ;
+	position: absolute; 
+}
+.circle-1  {
+	left: 12px;
+}
+.circle-2  {
+	left: 27px ;
+	right: 27px ;
+} 
+.circle-3  {
+	right: 12px;
+}
+.bar {  
+	height: 1px ;
+	width: 63px ;
+	background: $light-cyan;
+	position: absolute;
+	top: 4px;
+} 
+// DARK LAYER FOR CONTENT 
+.layer {  
+	width: 100%;
+	min-height: 300px; 
+	background-color: rgba(0, 0, 0, 0.85); 
+	overflow: hidden; 
+} 
+// ALL BUTTONS 
+.btn {  
+	padding: 10px 15px; 
+	border: none; 
+	cursor: pointer; 
+	outline: none; 
+	text-transform: uppercase; 
+}
+.btn-custom-1 { 
+	background: $light-cyan;
+	color: $white; 
+	margin: 20px;
+	z-index: 100;
+} 
+.btn-custom-2  {
+	background: $dirty-white ;
+	color: black; 
+	text-decoration: underline; 
+	z-index: 100 ;
+} 
+.btn-custom-3 { 
+	margin: 5px 0; 
+	background: $white; 
+	color: #000; 
+	font-family: $Lato; 
+	border: 1px solid $lightgray; 
+	font-weight: 900;
+	
+	@media #{$XS} { margin: 5px;}
+}
+.btn-custom-4 {  
+	display: block; 
+	background: inherit; 
+	color: $white; 
+	border: 2px solid $white; 
+	width: 100%; 
+	max-width: 150px; 
+	padding: 10px; 
+	margin: 30px auto; 
+	font-weight: 700; 
+	@include trans(all,.3s,ease-in-out);
+ 
+	&:hover,
+	&:focus {  
+		background: $white; 
+		color: #000;
+	}
+}//btn-custom-4 
+.btn-custom-5 { 
+	display: block; 
+	background: $white; 
+	color: #000; 
+	margin: 0 auto; 
+	@include trans(all,.3s,ease-in-out);
+ 
+	&:hover,
+	&:focus { 
+		@include transform(scale(1.1));
+	}
+	
+	@media #{$M} { margin:0;}
+}//btn-custom-5 
+.box  {
+	position: relative; 
+	min-height: 65px; 
+} 
+.description { 
+	padding-left: 80px; 
+	word-wrap: break-word; 
+	text-align: left; 
+} 
+.pgtop  {
+	position: fixed; 
+	bottom: 50px; 
+	right: 20px; 
+	text-align: center; 
+	background: rgba(0, 0, 0, 0.8); 
+	display: none; 
+	@include icon-ctrl(30px,17px,$white);
+	@include trans(all,.3s,linear);
+	@include borderRadius(2px); 
+ 
+	&:hover,
+	&:focus { 
+		i.fa {  
+			color: $light-cyan;
+		}	
+	}
+}//pg-top
+
+
+	
+
+	

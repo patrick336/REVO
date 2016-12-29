@@ -1,0 +1,21 @@
+.choose-us {
+	i.fa { 
+		position: absolute; 
+		left: 10px; 
+		top: 5px; 
+		text-align: center;
+		@include icon-ctrl(60px,36px,$light-cyan);
+	}
+
+	h5 {  
+		margin: 0; 
+	}
+	.box {  
+		margin: 35px 5px 0; 
+	}
+	.description { 
+		p {  
+			font-size: 13px;
+		}
+	} //description
+}//choose-us

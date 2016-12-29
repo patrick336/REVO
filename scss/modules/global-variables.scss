@@ -1,0 +1,42 @@
+// ----
+// Sass (v3.4.22)
+// Compass (v1.0.3)
+// ----
+
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans|Roboto:400,700|Rubik|Ubuntu');
+@import 'https://fonts.googleapis.com/css?family=Black+Ops+One|Cormorant:400,700|Inconsolata:400,700|Montserrat:400,700|Open+Sans:400,700|Raleway:400,700,900|Roboto:400,700,700i,900,900i|Source+Sans+Pro:400,700|Ubuntu:400,700,700i&subset=latin-ext';
+
+//maxWidth Container
+$maxWidthSite: 1200px;
+
+//Images
+$image-jumbotron: '../images/meeting-1280-853.jpg';
+$image-testimonials: '../images/mountaing-rude.jpeg';
+$image-contact-form: '../images/mountains-1280-853.jpeg';
+
+// Colours of the project
+$dirty-white: #f0f5f9;
+$black1: #1a1a1a;
+$black2: #141414;
+$white: #fff;
+$light-cyan: #67d5b5;
+$lightgray: #9E9E9E;
+
+//Inputs colours
+$orange: rgb(255, 152, 0);
+$orange-with-opacity: rgba(255, 152, 0, 0.2);
+$green: rgb(85, 238, 112);
+$green-with-opacity: rgba(0, 255, 0, 0.2);
+
+//Fonts
+$Ubuntu: "Ubuntu", sans-serif ;
+$Verdana: "Verdana", sans-serif;
+$Lato: "Lato", sans-serif;
+$Montserrat: "Montserrat", sans-serif;
+$OpenSans: "Open Sans", sans-serif;
+
+//Breakpoints
+$smartphone: 'screen and (min-width: 480px)';
+$tablet: 'screen and (min-width: 768px)';
+$iPad:'screen and (min-width: 922px)';
+$desktop: 'screen and (min-width:1200px)'; 

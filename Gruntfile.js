@@ -3,30 +3,31 @@ module.exports = function (grunt) {
     grunt.initConfig({
         sass: {
             options: {
-                sourceMap: true
+                sourceMap: false
             },
             dist: {
                 files: {
-                    'css/style-test.css': 'sass/style-test.sass',
+                    'css/main.css': 'scss/main.scss',
+					'css/grid.css': 'scss/partials/grid.scss'
                 }
             }
         },
         
 
-        imagemin: {
-            dynamic: {
-                files: [{
-                    expand: true, 
-                    cwd: 'images/', 
-                    src: ['**/*.{png,jpg,jpeg,gif}'], 
-                    dest: 'images/build/'
-                }]
-            }
-        },
+//        imagemin: {
+//            dynamic: {
+//                files: [{
+//                    expand: true, 
+//                    cwd: 'images/', 
+//                    src: ['**/*.{png,jpg,jpeg,gif}'], 
+//                    dest: 'images/build/'
+//                }]
+//            }
+//        },
         
         watch: {
             scripts: {
-                files: ['sass/*.sass'],
+                files: 'scss/*.scss',
                 tasks: ['sass'],
                 options: {
                     spawn: false,
@@ -38,6 +39,7 @@ module.exports = function (grunt) {
             default_options: {
                 bsFiles: {
                     src: [
+						"js/*.js",
                         "css/*.css",
                         "*.html"
                     ]
@@ -62,3 +64,4 @@ module.exports = function (grunt) {
 //    grunt.registerTask('default', ['sass', 'browserSync','watch','imagemin']);
 
 };
+
