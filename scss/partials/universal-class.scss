@@ -153,11 +153,11 @@ body {
 
 section .container {  
 	margin: 0 auto ;
-	padding: 10px 0 ;
+	padding: 15px 0;
 	
 	@media #{$XS} { 
 	  margin: 0 auto;
-	  padding: 70px 0;
+	  padding: 60px 0;
 	}
 } 
 
@@ -227,7 +227,7 @@ ul,ol {
 // PATTERN 
 
 .pattern  {
-	margin: 40px auto 20px ;
+	margin: 50px auto 20px ;
 	display: block ;
 	width: 63px ;
 	position: relative ;

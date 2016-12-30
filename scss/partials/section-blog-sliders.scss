@@ -1,12 +1,13 @@
 .blog-sliders { 
-	max-width: 339px; 
 	margin: 20px auto; 
 	width: 95%; 
 	position: relative; 
-	overflow: hidden; 
- 
+	overflow: hidden;
+//	height: 339px;
+ 	max-width: 320px;
 	img  {
 		@include borderRadius(3px);
+		position: absolute;
 	}
 	&:hover,
 	&:focus {
@@ -55,7 +56,8 @@
 	color: $white ;
 	font-weight: 700 ;
 	z-index: 100 ;
-	border-top-right-radius: 3px; 
+	border-top-right-radius: 3px;
+	display: none;
  
 	p {  
 		margin: 5px; 
@@ -64,13 +66,17 @@
 }//tag 
 
 
-.caption p { 
-	font-size: 13px; 
-	color: #666; 
-	text-transform: uppercase; 
-	letter-spacing: 1px; 
+.caption {
+	display: none;
+	margin-bottom: 10px;
+	
+	p { 
+		font-size: 13px; 
+		color: #666; 
+		text-transform: uppercase; 
+		letter-spacing: 1px; 
+	}
 }
-
 a.btn-read-more {  
 	padding: 10px; 
 	color: $light-cyan; 
