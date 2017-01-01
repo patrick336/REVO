@@ -1,4 +1,4 @@
-jQuery(function ($) {
+//jQuery(function ($) {
         //zresetowanie scrolla
         $.scrollTo(0);
 
@@ -49,4 +49,4 @@ jQuery(function ($) {
                if($(this).scrollTop() > 600)    $('#js-pageTop').fadeIn(100);
                else $('#js-pageTop').fadeOut(100);
     });
- });//ready
+// });//ready

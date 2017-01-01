@@ -109,7 +109,8 @@ a.social-links {
 	margin: 0 5px;
 	display: inline-block;
 	text-align: center;
-  @include icon-ctrl(25px,18px,$white);
+	color: $white;
+  	@include icon-ctrl(25px,18px);
   
   &:hover,
   &:focus {

@@ -16,10 +16,11 @@
 		top: 0;
 		background: $light-cyan;
 		text-align: center;
-		@include icon-ctrl (60px, 150%, $white);
+		color: $white;
+		@include icon-ctrl (60px, 150%);
 		@include borderRadius(100%);
 		
-		@media #{$XL} { @include icon-ctrl(65px,150%,$white); }
+		@media #{$XL} { @include icon-ctrl(65px,150%); }
 	}
 	.description h6 {
 		margin: 0px;

@@ -67,7 +67,8 @@
 	background: inherit; 
 	font-weight: 900; 
 	cursor: pointer;
-	@include icon-ctrl(30px,20px,$white);
+	color: $white;
+	@include icon-ctrl(30px,20px);
 	
 	@media #{$S} {display: none;}
 }

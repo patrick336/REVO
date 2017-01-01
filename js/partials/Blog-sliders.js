@@ -1,5 +1,5 @@
 
-$(function() {
+//$(function() {
 
 // Informacje o zdjęciach 
 	var data =  {
@@ -8,17 +8,17 @@ $(function() {
 		{
 			"position" : [
 				{
-					"src" : "./images/sliders-images/photo-1.jpeg",
+					"src" : "./images/compressed/sliders-images/photo-1.jpeg",
 					"title" : "photo-1",
 					"alt" : "photo-1"
 				},
 				{
-					"src" : "./images/sliders-images/photo-2.jpeg",
+					"src" : "./images/compressed/sliders-images/photo-2.jpeg",
 					"title" : "photo-2",
 					"alt" : "photo-2"
 				},
 				{
-					"src" : "./images/sliders-images/photo-3.jpeg",
+					"src" : "./images/compressed/sliders-images/photo-3.jpeg",
 					"title" : "photo-3",
 					"alt" : "photo-3"
 				}
@@ -27,17 +27,17 @@ $(function() {
 		{
 			"position" : [
 				{
-					"src" : "./images/sliders-images/photo-4.jpeg",
+					"src" : "./images/compressed/sliders-images/photo-4.jpeg",
 					"title" : "photo-4",
 					"alt" : "photo-4"
 				},
 				{
-					"src" : "./images/sliders-images/photo-5.jpeg",
+					"src" : "./images/compressed/sliders-images/photo-5.jpeg",
 					"title" : "photo-5",
 					"alt" : "photo-5"
 				},
 				{
-					"src" : "./images/sliders-images/photo-6.jpeg",
+					"src" : "./images/compressed/sliders-images/photo-6.jpeg",
 					"title" : "photo-6",
 					"alt" : "photo-6"
 				}
@@ -46,17 +46,17 @@ $(function() {
 		{
 			"position" : [
 				{
-					"src" : "./images/sliders-images/photo-7.jpeg",
+					"src" : "./images/compressed/sliders-images/photo-7.jpeg",
 					"title" : "photo-7",
 					"alt" : "photo-7"
 				},
 				{
-					"src" : "./images/sliders-images/photo-8.jpeg",
+					"src" : "./images/compressed/sliders-images/photo-8.jpeg",
 					"title" : "photo-8",
 					"alt" : "photo-8"
 				},
 				{
-					"src" : "./images/sliders-images/photo-9.jpeg",
+					"src" : "./images/compressed/sliders-images/photo-9.jpeg",
 					"title" : "photo-9",
 					"alt" : "photo-9"
 				}
@@ -86,9 +86,9 @@ $(function() {
 		//Pozycja następnego zdjęcia.
 		pos++;
 		//Pobieramy index slajdu ,który się uakywnił.
-		nrSlider = $(this).parent().attr('data-index');
+		var nrSlider = $(this).parent().attr('data-index');
 		//Pobieramy obiekt obrazu,który właśnie się uaktywnił
-		$element = $(this).siblings('img');
+		var $element = $(this).siblings('img');
 		// Pobieramy ilość zdjęć aktywnego slajdu,można swobodnie dodawać zdjęcia.
 		var imageLength = data.slider[nrSlider].position.length;
 		//Sprawdzamy warunek brzegowy i wywołujemy funkcję
@@ -155,26 +155,9 @@ $(function() {
 	
 	
 
-}); //ready
+//}); //ready
 
 
 
 
 
-//archiwum 
-
-//	function fade ($element,nrSlider,pos){
-//
-//		var imgPath = data.slider[nrSlider].position[pos].src;
-//		var imgTitle = data.slider[nrSlider].position[pos].title;
-//		var imgAlt = data.slider[nrSlider].position[pos].alt;
-//
-//		$element.fadeOut('fast', function () {
-//			$(this).attr({
-//				src: imgPath,
-//				title: imgTitle,
-//				alt: imgAlt,
-//				'indexImage': pos
-//			}).fadeIn('slow');
-//		});
-//	}

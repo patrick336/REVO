@@ -8,33 +8,19 @@ module.exports = function (grunt) {
             dist: {
                 files: {
                     'css/main.css': 'scss/main.scss',
-					          'css/grid.css': 'scss/partials/grid.scss'
+				    'css/grid.css': 'scss/partials/grid.scss'
                 }
             }
         },
-
-
-//        imagemin: {
-//            dynamic: {
-//                files: [{
-//                    expand: true,
-//                    cwd: 'images/',
-//                    src: ['**/*.{png,jpg,jpeg,gif}'],
-//                    dest: 'images/build/'
-//                }]
-//            }
-//        },
-
         watch: {
             scripts: {
-                files: 'scss/partials/*.scss',
+                files: 'scss/modules/*.scss',
                 tasks: ['sass'],
                 options: {
                     spawn: false,
                 },
             }
         },
-
         browserSync: {
             default_options: {
                 bsFiles: {
@@ -51,16 +37,59 @@ module.exports = function (grunt) {
                     }
                 }
             }
-        }
+        },
+	    imagemin: {
+            dynamic: {
+                files: [{
+                    expand: true,
+                    cwd: 'images/',
+                    src: ['**/*.{png,jpg,jpeg,gif}'],
+                    dest: 'images/compressed/'
+                }]
+            }
+        },
+		cssmin: {
+		  	target: {
+				files: [{
+			  		expand: true,
+				  	cwd: 'css',
+				  	src: ['*.css', '!*.min.css'],
+				  	dest: 'css',
+				  	ext: '.min.css'
+					}]
+		  	}
+		},
+		concat: {
+			options: {
+			  separator: '',
+			},
+			dist: {
+			  src: [ 'js/partials/*.js'],
+			  dest: 'js/script.js'
+			},
+  		},
+		uglify: {
+    		my_target: {
+      			files: {
+        			'js/script.min.js': ['js/script.js']
+      			}
+    		}
+  		},
+		jshint: {
+    		all:['js/partials/*.js']  
+  		}
     });
 
     // Load the plugins tasks
     grunt.loadNpmTasks('grunt-sass');
-//    grunt.loadNpmTasks('grunt-contrib-imagemin');
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-browser-sync');
+	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-contrib-jshint');
+	grunt.loadNpmTasks('grunt-contrib-cssmin');
     // Default task(s).
-    grunt.registerTask('default', ['sass', 'browserSync','watch']);
-//    grunt.registerTask('default', ['sass', 'browserSync','watch','imagemin']);
+    grunt.registerTask('default', ['sass','jshint','concat','uglify','browserSync','watch']);
 
 };

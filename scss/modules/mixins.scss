@@ -20,12 +20,12 @@
     border-radius: $icon-radius;
 }
 
-@mixin icon-ctrl ($size, $font-size, $color-text) {
+@mixin icon-ctrl ($size, $font-size) {
     height: $size;
     width: $size;
     line-height: $size;
     font-size: $font-size;
-    color: $color-text;
+    //color: $color-text;
 }
 
 @mixin trans($property, $duration, $effect) {
@@ -57,7 +57,7 @@
 }
 
 
-//grid
+//grid - not used yet
 
 @mixin smartphone {
   @media #{$smartphone} {

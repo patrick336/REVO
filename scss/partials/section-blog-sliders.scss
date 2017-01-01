@@ -4,7 +4,7 @@
 	position: relative; 
 	overflow: hidden;
 //	height: 339px;
- 	max-width: 320px;
+ 	max-width: 339px;
 	img  {
 		@include borderRadius(3px);
 		position: absolute;
@@ -32,11 +32,12 @@
 	top: 50%; 
 	border: none; 
 	background: $white; 
-	font-weight: bold; 
+	font-weight: bold;
+	color: $light-cyan;
 	z-index: 100; 
 	opacity: 0.25;
 	@include borderRadius(50%);
-	@include icon-ctrl (40px,24px,$light-cyan);
+	@include icon-ctrl (40px,24px);
 	@include trans(all,.6s,ease);
 	@include transform(translateY(-50%));
 	

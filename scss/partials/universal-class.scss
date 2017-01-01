@@ -1,124 +1,3 @@
-// ----
-// Sass (v3.4.21)
-// Compass (v1.0.3)
-// ----
-// ----
-// Sass (v3.4.22)
-// Compass (v1.0.3)
-// ----
-
-@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans|Roboto:400,700|Rubik|Ubuntu');
-@import 'https://fonts.googleapis.com/css?family=Black+Ops+One|Cormorant:400,700|Inconsolata:400,700|Montserrat:400,700|Open+Sans:400,700|Raleway:400,700,900|Roboto:400,700,700i,900,900i|Source+Sans+Pro:400,700|Ubuntu:400,700,700i&subset=latin-ext';
-
-//maxWidth Container
-$maxWidthSite: 1200px;
-
-//Images
-$image-jumbotron: '../images/meeting-1280-853.jpg';
-$image-testimonials: '../images/mountaing-rude.jpeg';
-$image-contact-form: '../images/mountains-1280-853.jpeg';
-
-// Colours of the project
-$dirty-white: #f0f5f9;
-$black1: #1a1a1a;
-$black2: #141414;
-$white: #fff;
-$light-cyan: #67d5b5;
-$lightgray: #9E9E9E;
-
-//Inputs colours
-$orange: rgb(255, 152, 0);
-$orange-with-opacity: rgba(255, 152, 0, 0.2);
-$green: rgb(85, 238, 112);
-$green-with-opacity: rgba(0, 255, 0, 0.2);
-
-//Fonts
-$Ubuntu: "Ubuntu", sans-serif ;
-$Verdana: "Verdana", sans-serif;
-$Lato: "Lato", sans-serif;
-$Montserrat: "Montserrat", sans-serif;
-$OpenSans: "Open Sans", sans-serif;
-
-//Breakpoints
-$XS: 'screen and (min-width: 480px)';
-$S: 'screen and (min-width: 768px)';
-$M:'screen and (min-width: 922px)';
-$L:'screen and (min-width:1024px)';
-$XL: 'screen and (min-width:1200px)'; 
-
-//Mixins
-@mixin transform($transforms) {
-    -moz-transform: $transforms;
-    -o-transform: $transforms;
-    -ms-transform: $transforms;
-    -webkit-transform: $transforms;
-    transform: $transforms;
-}
-@mixin boxShadow ($horizontal, $vertical, $blur, $spread, $opacity) {
-    -webkit-box-shadow: $horizontal $vertical $blur $spread $opacity;
-    -moz-box-shadow: $horizontal $vertical $blur $spread $opacity;
-    box-shadow: $horizontal $vertical $blur $spread $opacity;
-}
-@mixin borderRadius ($icon-radius) {
-    -webkit-border-radius: $icon-radius;
-    -moz-border-radius: $icon-radius;
-    -ms-border-radius: $icon-radius;
-    border-radius: $icon-radius;
-}
-@mixin icon-ctrl ($size, $font-size, $color-text) {
-    height: $size;
-    width: $size;
-    line-height: $size;
-    font-size: $font-size;
-    color: $color-text;
-}
-@mixin trans($property, $duration, $effect) {
-    -moz-transition: $property $duration $effect;
-    -webkit-transition: $property $duration $effect;
-    transition: $property $duration $effect;
-}
-@mixin keyframe($animation-name) {
-    @-webkit-keyframes #{$animation-name} {
-        @content
-    }
-    @-moz-keyframes #{$animation-name} {
-        @content
-    }
-    @-o-keyframes #{$animation-name} {
-        @content
-    }
-    @keyframes #{$animation-name} {
-        @content
-    }
-}
-@mixin animation ($animation, $duration, $timing, $delay,$fill-mode, $play-state) {
-    -webkit-animation: $animation $duration $timing $delay $fill-mode $play-state;
-    -moz-animation: $animation $duration $timing $delay $fill-mode $play-state;
-    -o-animation: $animation $duration $timing $delay $fill-mode $play-state;
-    animation: $animation $duration $timing $delay $fill-mode $play-state;
-}
-@mixin smartphone {
-  @media #{$smartphone} {
-    @content;
-  }
-}
-@mixin tablet {
-  @media #{$tablet} {
-    @content;
-  }
-}
-@mixin iPad {
-  @media #{$Ipad} {
-    @content;
-  }
-}
-@mixin desktop {
-  @media #{$desktop} {
-    @content;
-  }
-}
-
-
 /////////////////////////////////////////
 
 * { 
@@ -343,8 +222,9 @@ ul,ol {
 	right: 20px; 
 	text-align: center; 
 	background: rgba(0, 0, 0, 0.8); 
-	display: none; 
-	@include icon-ctrl(30px,17px,$white);
+	display: none;
+	color: $white;
+	@include icon-ctrl(30px,17px);
 	@include trans(all,.3s,linear);
 	@include borderRadius(2px); 
  

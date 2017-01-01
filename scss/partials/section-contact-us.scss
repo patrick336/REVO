@@ -22,7 +22,8 @@
 		top: 0 ;
 		text-align: center; 
 		border: 1px solid $white;
-		@include icon-ctrl (60px,150%,$white);
+		color: $white;
+		@include icon-ctrl (60px,150%);
 		@include borderRadius (100%);
 	}
 }

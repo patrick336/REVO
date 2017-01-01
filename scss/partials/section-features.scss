@@ -6,9 +6,10 @@
 	margin: 25px auto; 
  
 	.fa { 
-		@include icon-ctrl (90px,36px,$light-cyan);
+		@include icon-ctrl (90px,36px);
 		@include borderRadius(50%); 
-    	border: 1.5px solid $light-cyan; 
+    	border: 1.5px solid $light-cyan;
+		color: $light-cyan;
 	}
  	p  {
 		font-size: 13px; 
