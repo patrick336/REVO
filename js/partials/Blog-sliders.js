@@ -1,5 +1,5 @@
 
-//$(function() {
+$(function() {
 
 // Informacje o zdjęciach 
 	var data =  {
@@ -154,8 +154,8 @@
 	$('.prev').click(prevSlide);
 	
 	
-
-//}); //ready
+	
+}); //ready
 
 
 

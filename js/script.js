@@ -44,84 +44,20 @@
 		current = $(this).attr('data-tmp');
 		change();
 	});
-//}); //ready//jQuery(function ($) {
-        //zresetowanie scrolla
-        $.scrollTo(0);
-
-        $('#js-about').click(function (e) {
-            e.preventDefault();
-            $.scrollTo($('#about'), 1000);
-        });
-		$('#js-portfolio').click(function (e) {
-            e.preventDefault();
-            $.scrollTo($('#portfolio'), 1000);
-        });       
-		$('#js-blog').click(function (e) {
-            e.preventDefault();
-            $.scrollTo($('#blog'), 1000);
-        });       
-		$('#js-contact').click(function (e) {
-            e.preventDefault();
-            $.scrollTo($('#contact'), 1000);
-        });
-        $('#js-pageTop').click(function (e) {
-            e.preventDefault();
-            $.scrollTo($('#page-top'), 1200);
-        });        
-		$('#js-home').click(function (e) {
-            e.preventDefault();
-            $.scrollTo($('#page-top'), 1200);
-        });
-        $('#js-pages').click(function (e) {
-            e.preventDefault();
-            $.scrollTo($('#pages'), 1000);
-        }); 
-  
-	$('#js-menu-button').click(function () {
-        $('.navigation-menu').toggle();
+//}); //ready// $(function() {   
+    $('#js-newsletter-form').submit(function (e) {
+        e.preventDefault();
+        alert("Żądanie do serwera zostało zatrzymane.\nBrak skryptu obsługującego formularz.\nZa utrudnienia przepraszamy.\nTeam REVO STUDIO");
     });
-    $(window).scroll(function () {
-        if (window.scrollY < 50 && window.innerWidth > 778) {
-            $('.navigation').css({
-                'background': 'transparent'
-            });
-            return;
-        }
-        else {
-            $('.navigation').css({
-                'background': 'rgba(0,0,0,0.75)'
-            });
-        }
-               if($(this).scrollTop() > 600)    $('#js-pageTop').fadeIn(100);
-               else $('#js-pageTop').fadeOut(100);
+    $('#js-contact-us-form').submit(function (e) {
+        confirm('Wysłać wiadomość ?');
+        e.preventDefault();
+        alert("Żądanie do serwera zostało zatrzymane.\nBrak skryptu obsługującego formularz.\nZa utrudnienia przepraszamy.\nTeam REVO STUDIO");
     });
-// });//ready// javascript code 
-	var bars = document.getElementsByClassName('js-percent-loading');
-	var labels = document.getElementsByClassName('js-label');
-//Procedury funkcji 
-	function playAnimation() {
-	var i = 0;
-	var timer = setInterval(function () {
-		if (i < bars.length) {
-			bars[i].style.animationPlayState = "running";
-			labels[i].style.animationPlayState = "running";
-			i++;
-		}
-		else clearInterval(timer);
-	}, 300);
-}
-	function startAnimate() {
-	var distance = document.getElementById('js-skills').getBoundingClientRect().top;
-	if (0 < distance && distance < 150) {
-		playAnimation();
-	}
-}
-// NASŁUCHIWANIE ZDARZEŃ 
-	window.addEventListener('scroll', startAnimate, false);
+// }); //ready
 
 
-
-//$(function() {
+$(function() {
 
 // Informacje o zdjęciach 
 	var data =  {
@@ -276,27 +212,86 @@
 	$('.prev').click(prevSlide);
 	
 	
-
-//}); //ready
-
-
+	
+}); //ready
 
 
 
-//archiwum 
 
-//	function fade ($element,nrSlider,pos){
-//
-//		var imgPath = data.slider[nrSlider].position[pos].src;
-//		var imgTitle = data.slider[nrSlider].position[pos].title;
-//		var imgAlt = data.slider[nrSlider].position[pos].alt;
-//
-//		$element.fadeOut('fast', function () {
-//			$(this).attr({
-//				src: imgPath,
-//				title: imgTitle,
-//				alt: imgAlt,
-//				'indexImage': pos
-//			}).fadeIn('slow');
-//		});
-//	}
+
+//jQuery(function ($) {
+        //zresetowanie scrolla
+        $.scrollTo(0);
+
+        $('#js-about').click(function (e) {
+            e.preventDefault();
+            $.scrollTo($('#about'), 1000);
+        });
+		$('#js-portfolio').click(function (e) {
+            e.preventDefault();
+            $.scrollTo($('#portfolio'), 1000);
+        });       
+		$('#js-blog').click(function (e) {
+            e.preventDefault();
+            $.scrollTo($('#blog'), 1000);
+        });       
+		$('#js-contact').click(function (e) {
+            e.preventDefault();
+            $.scrollTo($('#contact'), 1000);
+        });
+        $('#js-pageTop').click(function (e) {
+            e.preventDefault();
+            $.scrollTo($('#page-top'), 1200);
+        });        
+		$('#js-home').click(function (e) {
+            e.preventDefault();
+            $.scrollTo($('#page-top'), 1200);
+        });
+        $('#js-pages').click(function (e) {
+            e.preventDefault();
+            $.scrollTo($('#pages'), 1000);
+        }); 
+  
+	$('#js-menu-button').click(function () {
+        $('.navigation-menu').toggle();
+    });
+    $(window).scroll(function () {
+        if (window.scrollY < 50 && window.innerWidth > 778) {
+            $('.navigation').css({
+                'background': 'transparent'
+            });
+            return;
+        }
+        else {
+            $('.navigation').css({
+                'background': 'rgba(0,0,0,0.75)'
+            });
+        }
+               if($(this).scrollTop() > 600)    $('#js-pageTop').fadeIn(100);
+               else $('#js-pageTop').fadeOut(100);
+    });
+// });//ready// javascript code 
+	var bars = document.getElementsByClassName('js-percent-loading');
+	var labels = document.getElementsByClassName('js-label');
+//Procedury funkcji 
+	function playAnimation() {
+	var i = 0;
+	var timer = setInterval(function () {
+		if (i < bars.length) {
+			bars[i].style.animationPlayState = "running";
+			labels[i].style.animationPlayState = "running";
+			i++;
+		}
+		else clearInterval(timer);
+	}, 300);
+}
+	function startAnimate() {
+	var distance = document.getElementById('js-skills').getBoundingClientRect().top;
+	if (0 < distance && distance < 150) {
+		playAnimation();
+	}
+}
+// NASŁUCHIWANIE ZDARZEŃ 
+	window.addEventListener('scroll', startAnimate, false);
+
+
