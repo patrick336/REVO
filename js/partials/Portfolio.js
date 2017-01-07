@@ -1,4 +1,4 @@
-//javascript code 
+//Buttons
 var btnAssign = document.getElementById("js-category");
 var btnCategory = btnAssign.querySelectorAll("button"); // getElementsByName equivalent
 
@@ -14,7 +14,7 @@ var project = gallery.querySelectorAll('.portfolio-item');
 var cover = gallery.querySelectorAll('.portfolio-cover');
 
 
-
+// usuwa klasę active ze wszystkich przycisków
 function resetBtn() {
  	
 	var nameClass = /(?:^|\s)active(?!\S)/g; 
@@ -24,47 +24,32 @@ function resetBtn() {
 	}
 }
 
-// function setCategory (category) {
+function setCategory (category) {
 	
-// 	var test="";
-// 	category = category.toUpperCase();
+	var test="";
+	category = category.toUpperCase();
 	
 	
 
-// 	for(var i = 0; i < project.length ; i++) {	
+	for(var i = 0; i < project.length ; i++) {	
 		 
-// 		test = project[i].getAttribute("category");
-// 		test = test.toUpperCase();
+		test = project[i].getAttribute("category");
+		test = test.toUpperCase();
 
-// 	 	var isAppliedClassFadeIn,isAppliedClassFadeOut  = false;
+	 // 	var isAppliedClassFadeIn,isAppliedClassFadeOut  = false;
 
-// 		if (project[i].className.match(/(?:^|\s)fadeInEffect(?!\S)/))  isAppliedClassFadeIn = true;
-// 		if (project[i].className.match(/(?:^|\s)fadeOutEffect(?!\S)/))  isAppliedClassFadeOut = true;
+		// if (project[i].className.match(/(?:^|\s)fadeInEffect(?!\S)/))  isAppliedClassFadeIn = true;
+		// if (project[i].className.match(/(?:^|\s)fadeOutEffect(?!\S)/))  isAppliedClassFadeOut = true;
 
-// 		if(category == test) {
-// 		 	// //pokazywane elementu na ekranie
-// 		 	// if(isAppliedClassFadeOut) { project[i].className = project[i].className.replace(/\s*fadeOutEffect\s*/,' '); }
-// 		 	// // project[i].className = project[i].className.replace(/\s*fadeOutEffect\s*/, ' fadeInEffect ');
-// 		 	// project[i].className += ' fadeInEffect';
+		if(category == test) {
+		 	// pokazywane elementu na ekranie
+		 	// project[i].className = project[i].className.replace(/\s*fadeOutEffect\s*/, ' fadeInEffect ');
+		}
+		else {
 
-// 		 	project.clasList.
-
-
-
-// 		}
-// 		else {
-// 			if (isAppliedClassFadeIn)
-// 			project[i].className = project[i].className.replace(/\s*fadeInEffect\s*/, ' ');
-// 		 	project[i].className += ' fadeOutEffect';
-// 		}
-// 	}
-// }
-
-// for (var i=0 ; i < test.length ; i++) {
-		
-// 	test[i].className = test[i].className.replace(/\s*fadeOutEffect\s*/, ' fadeInEffect ');
-// 	cover[i].style.display = 'block';
-// }
+		}
+	}
+}
 
 
 
@@ -72,8 +57,7 @@ function resetBtn() {
 	btnAll.addEventListener('click',function(){ 
 	resetBtn();	
 	this.className += ' active';
-	showAll();	
-	// setCategory('All');
+	//kod pokazujacy wszystkie elementy
 	});
 	btnphoto.addEventListener('click',function(){
 	resetBtn();	
@@ -95,23 +79,4 @@ function resetBtn() {
 		this.className += ' active';
 		setCategory('Graphic');
 	});
-
-window.onload = function () {
-	btnAll.className += ' active';
-	showAll();
-}
-
-function showAll () {
-	
-	for (var i = 0 ; i < project.length ; i++ ) {
-		project[i].className +=' fadeInEffect';
-	}
-}
-
-function hideAll () {
-	
-	for (var i = 0 ; i < project.length ; i++ ) {
-		project[i].className +=' fadeOutEffect';
-	}
-}
 
