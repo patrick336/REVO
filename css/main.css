@@ -425,13 +425,11 @@ ul, ol {
 .portfolio-item {
   position: relative;
   overflow: hidden;
-  cursor: pointer;
-  opacity: 0; }
+  cursor: pointer; }
   .portfolio-item .portfolio-text {
     position: relative;
     color: #fff; }
   .portfolio-item .portfolio-cover {
-    display: none;
     bottom: -100%;
     left: 10%;
     right: 10%;

@@ -6,7 +6,6 @@
 	position: relative;
 	overflow: hidden;
 	cursor: pointer;
-	opacity: 0;
 
 	.portfolio-text {
 		position: relative;
@@ -14,7 +13,7 @@
 	}
 
 	.portfolio-cover {
-		display: none;
+
 		bottom: -100%;
 		left: 10%;
 	 	right: 10%;
@@ -23,15 +22,11 @@
 		height: 30%;
 		max-height: 100px;
 		width: 80%;
-//		opacity: 0;
-		// @include boxShadow(1px,1px,3px,3px,$primary-accent);
-//		@include transform(translateY(-50%));
 		@include trans(all,.4s,ease-in-out);
 		background-color: $primary-accent;
 	}
 	&:hover,&:focus{
 		> .portfolio-cover {
-//			opacity: 1;
 			bottom: 0%;
 		}
 	}
