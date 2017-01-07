@@ -1,4 +1,4 @@
-//$(function() {
+$(function() {
 // Zmienne globalne
 	var content = $('.person-container');
 	var contentLength = content.find('.person').length;
@@ -44,4 +44,4 @@
 		current = $(this).attr('data-tmp');
 		change();
 	});
-//}); //ready
+}); //ready

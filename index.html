@@ -9,7 +9,7 @@
 	<meta name="description" content="Opis w Google" />
 	<meta name="keywords" content="słowa, kluczowe, wypisane, po, porzecinku" />
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="./css/main.min.css">
+	<link rel="stylesheet" href="./css/main.css">
 </head>
 <body id="page-top">
 	<!--   NAVIGATION-->
@@ -114,12 +114,12 @@
 						<div class="circle circle-2"></div>
 						<div class="circle circle-3"></div>
 					</div>
-					<div class="btn-groups">
-						<button type="button" class="btn btn-custom-3 active">all</button>
-						<button type="button" class="btn btn-custom-3">photography</button>
-						<button type="button" class="btn btn-custom-3">web design</button>
-						<button type="button" class="btn btn-custom-3">web development</button>
-						<button type="button" class="btn btn-custom-3">graphic</button>
+					<div class="btn-groups" id="js-category">
+						<button id="js-btnAll" type="button" class="btn btn-custom-3">all</button>
+						<button id="js-btnPhoto" type="button" class="btn btn-custom-3">photography</button>
+						<button id="js-btnWebDesign" type="button" class="btn btn-custom-3">web design</button>
+						<button id="js-btnWebDevelopment" type="button" class="btn btn-custom-3">web development</button>
+						<button id="js-btnGraphic" type="button" class="btn btn-custom-3">graphic</button>
 					</div>
 				</div>
 			</div>
@@ -129,28 +129,103 @@
 	<section class="gallery" id="gallery">
 		<div class="row">
 			<div class="col col-sm-3">
-				<img src="./images/compressed/slices/Desktop/slice-1.jpg">
+				<div class="portfolio-item" category="photography">
+					<div class="portfolio-cover">
+						<div class="portfolio-text">
+							<h4 class="headers">stationary design</h4>
+						</div>
+					</div>
+					<img src="./images/compressed/slices/Desktop/slice-1.jpg">
+				</div>
 			</div>
 			<div class="col col-sm-6">
 				<div class="row">
 					<div class="col col-sm-6">
-						<img src="./images/compressed/slices/Desktop/slice-2.jpg" alt="">
+						<div class="portfolio-item" category="graphic">
+							<div class="portfolio-cover">
+								<div class="portfolio-text">
+									<h4 class="headers">stationary design</h4>
+								</div>
+							</div>
+							<img src="./images/compressed/slices/Desktop/slice-2.jpg" >
+						</div>
 					</div>
 					<div class="col col-sm-6">
-						<img src="./images/compressed/slices/Desktop/slice-3.jpg" alt="">
+						<div class="portfolio-item" category="photography">
+							<div class="portfolio-cover">
+								<div class="portfolio-text">
+									<h4 class="headers">stationary design</h4>
+								</div>
+							</div>
+							<img src="./images/compressed/slices/Desktop/slice-3.jpg">
+						</div>
 					</div>
 				</div>
 				<div class="row">
-					<div class="col col-sm-12"> <img src="./images/compressed/slices/Desktop/slice-5.jpg" alt=""> </div>
+					<div class="col col-sm-12">
+						<div class="portfolio-item" category="webdesign">
+							<div class="portfolio-cover">
+								<div class="portfolio-text">
+									<h4 class="headers">stationary design</h4>
+								</div>
+							</div>
+							<img src="./images/compressed/slices/Desktop/slice-5.jpg">
+						</div>
+					</div>
 				</div>
 			</div>
-			<div class="col col-sm-3"> <img src="./images/compressed/slices/Desktop/slice-4.jpg" alt=""> </div>
+			<div class="col col-sm-3">
+				<div class="portfolio-item" category="photography">
+					<div class="portfolio-cover">
+						<div class="portfolio-text">
+							<h4 class="headers">stationary design</h4>
+						</div>
+					</div>
+					<img src="./images/compressed/slices/Desktop/slice-4.jpg">
+				</div>
+			</div>
 		</div>
 		<div class="row">
-			<div class="col col-xs-6 col-sm-3"> <img src="./images/compressed/slices/Desktop/slice-6.jpg" alt=""> </div>
-			<div class="col col-xs-6 col-sm-3"> <img src="./images/compressed/slices/Desktop/slice-7.jpg" alt=""> </div>
-			<div class="col col-xs-6 col-sm-3"> <img src="./images/compressed/slices/Desktop/slice-8.jpg" alt=""> </div>
-			<div class="col col-xs-6 col-sm-3"> <img src="./images/compressed/slices/Desktop/slice-6.jpg" alt=""> </div>
+			<div class="col col-xs-6 col-sm-3">
+				<div class="portfolio-item" category="graphic">
+					<div class="portfolio-cover">
+						<div class="portfolio-text">
+							<h4 class="headers">stationary design</h4>
+						</div>
+					</div>
+						<img src="./images/compressed/slices/Desktop/slice-6.jpg">
+				</div>
+			</div>
+			<div class="col col-xs-6 col-sm-3">
+				<div class="portfolio-item" category="webdevelopment">
+					<div class="portfolio-cover">
+						<div class="portfolio-text">
+							<h4 class="headers">stationary design</h4>
+						</div>
+					</div>
+					<img src="./images/compressed/slices/Desktop/slice-7.jpg">
+				</div>
+			</div>
+			<div class="col col-xs-6 col-sm-3">
+				<div class="portfolio-item" category="webdevelopment">
+					<div class="portfolio-cover">
+						<div class="portfolio-text">
+							<h4 class="headers">stationary design</h4>
+						</div>
+					</div>
+					<img src="./images/compressed/slices/Desktop/slice-8.jpg">
+				</div>
+			</div>
+			<div class="col col-xs-6 col-sm-3">
+				<div class="portfolio-item" category="webdesign">
+					<div class="portfolio-cover">
+						<div class="portfolio-text">
+							<h4 class="headers">stationary design</h4>
+						</div>
+					</div>
+					<img src="./images/compressed/slices/Desktop/slice-6.jpg">
+				</div>
+			</div>
 		</div>
 	</section>
 	<!--    WHAT WE DO - HEADER-->
@@ -708,6 +783,12 @@
 	<a id="js-pageTop" class="pgtop" href=""> <i class="fa fa-chevron-up" aria-hidden="true"></i> </a>
 </body>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" asyn></script>
-	<script src="js/jquery.scrollTo.js" asyn></script>
-	<script src="js/script.min.js" type="text/javascript" asyn></script>
+	<script src="js/vendors/jquery-scrollTo.min.js"></script>
+<!--	<script src="js/script.min.js"></script>-->
+	<script src="js/partials/App.js" type="text/javascript"></script>
+	<script src="js/partials/Navigation.js" type="text/javascript"></script>
+	<script src="js/partials/Progress.js" type="text/javascript"></script>
+	<script src="js/partials/Animations.js" type="text/javascript"></script>
+	<script src="js/partials/Blog-sliders.js" type="text/javascript"></script>
+	<script src="js/partials/Portfolio.js" type="text/javascript"></script>
 </html>

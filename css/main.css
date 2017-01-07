@@ -117,7 +117,6 @@ ul, ol {
 
 .layer {
   width: 100%;
-  min-height: 300px;
   background-color: rgba(0, 0, 0, 0.85);
   overflow: hidden; }
 
@@ -217,6 +216,66 @@ ul, ol {
   .pgtop:hover i.fa, .pgtop:focus i.fa {
     color: #67d5b5; }
 
+.fadeInEffect {
+  -webkit-animation: fadeIn 1s linear 0s forwards running;
+  -moz-animation: fadeIn 1s linear 0s forwards running;
+  -o-animation: fadeIn 1s linear 0s forwards running;
+  animation: fadeIn 1s linear 0s forwards running; }
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: .2; }
+  100% {
+    opacity: 1; } }
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: .2; }
+  100% {
+    opacity: 1; } }
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: .2; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  0% {
+    opacity: .2; }
+  100% {
+    opacity: 1; } }
+
+.fadeOutEffect {
+  -webkit-animation: fadeOut 0.3s linear 0s forwards running;
+  -moz-animation: fadeOut 0.3s linear 0s forwards running;
+  -o-animation: fadeOut 0.3s linear 0s forwards running;
+  animation: fadeOut 0.3s linear 0s forwards running; }
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: .2; } }
+
+@-moz-keyframes fadeOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: .2; } }
+
+@-o-keyframes fadeOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: .2; } }
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: .2; } }
+
 .sticky {
   position: fixed;
   width: 100%;
@@ -232,7 +291,7 @@ ul, ol {
   line-height: 60px;
   padding-left: 15px;
   text-transform: uppercase;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Ubuntu", sans-serif; }
 
 .navigation {
   font-weight: 900;
@@ -362,6 +421,31 @@ ul, ol {
 
 .portfolio .pattern {
   margin: 35px auto 70px; }
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 0; }
+  .portfolio-item .portfolio-text {
+    position: relative;
+    color: #fff; }
+  .portfolio-item .portfolio-cover {
+    display: none;
+    bottom: -100%;
+    left: 10%;
+    right: 10%;
+    overflow: hidden;
+    position: absolute;
+    height: 30%;
+    max-height: 100px;
+    width: 80%;
+    -moz-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    background-color: rgba(103, 213, 181, 0.85); }
+  .portfolio-item:hover > .portfolio-cover, .portfolio-item:focus > .portfolio-cover {
+    bottom: 0%; }
 
 .creative-design {
   background-color: #f0f5f9;
@@ -500,8 +584,7 @@ ul, ol {
   .label p {
     margin: 0;
     font-size: 11px;
-    text-transform: uppercase;
-    font-weight: 600; }
+    text-transform: uppercase; }
     @media screen and (min-width: 480px) {
       .label p {
         font-size: 12px; } }

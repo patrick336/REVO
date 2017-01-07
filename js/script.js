@@ -1,4 +1,4 @@
-//$(function() {
+$(function() {
 // Zmienne globalne
 	var content = $('.person-container');
 	var contentLength = content.find('.person').length;
@@ -44,7 +44,8 @@
 		current = $(this).attr('data-tmp');
 		change();
 	});
-//}); //ready// $(function() {   
+}); //ready;
+$(function() {   
     $('#js-newsletter-form').submit(function (e) {
         e.preventDefault();
         alert("Żądanie do serwera zostało zatrzymane.\nBrak skryptu obsługującego formularz.\nZa utrudnienia przepraszamy.\nTeam REVO STUDIO");
@@ -54,9 +55,9 @@
         e.preventDefault();
         alert("Żądanie do serwera zostało zatrzymane.\nBrak skryptu obsługującego formularz.\nZa utrudnienia przepraszamy.\nTeam REVO STUDIO");
     });
-// }); //ready
+ }); //ready
 
-
+;
 $(function() {
 
 // Informacje o zdjęciach 
@@ -150,7 +151,7 @@ $(function() {
 		// Pobieramy ilość zdjęć aktywnego slajdu,można swobodnie dodawać zdjęcia.
 		var imageLength = data.slider[nrSlider].position.length;
 		//Sprawdzamy warunek brzegowy i wywołujemy funkcję
-		if (pos > imageLength- 1) pos=0;
+		if (pos > imageLength- 1) { pos=0; }
 		//Obiekt obrazu, nr slajdu, pozycja w danym slajdzie
 		fades($element,nrSlider,pos);
 	}
@@ -166,7 +167,7 @@ $(function() {
 		// Pobieramy ilość zdjęć aktywnego slajdu,można swobodnie dodawać zdjęcia.
 		var imageLength = data.slider[nrSlider].position.length;
 		//Sprawdzamy warunek brzegowy i wywołujemy funkcję
-		if (pos < 0) pos = imageLength - 1;
+		if (pos < 0) { pos = imageLength - 1; }
 		//Obiekt obrazu, nr slajdu, pozycja w danym slajdzie
 		fades($element,nrSlider,pos);
 	}
@@ -182,7 +183,7 @@ $(function() {
 		var imgTitle = data.slider[nrSlider].position[pos].title;
 		var imgAlt = data.slider[nrSlider].position[pos].alt;
 		
-		//Tworzymy kod nowego obrazka,obiekt jest już w pamięci podręcznej
+		//Tworzymy kod nowego obrazka
 		var newImage = $('<img>',{
 			src: imgPath,
 			title: imgTitle,
@@ -207,7 +208,7 @@ $(function() {
 	setImage();
 
 
-///////////////   Nasłuchiwanie zdarzeń ////////////////////////////
+//   Nasłuchiwanie zdarzeń 
 	$('.next').click(nextSlide);
 	$('.prev').click(prevSlide);
 	
@@ -219,7 +220,7 @@ $(function() {
 
 
 
-//jQuery(function ($) {
+;jQuery(function ($) {
         //zresetowanie scrolla
         $.scrollTo(0);
 
@@ -255,22 +256,19 @@ $(function() {
 	$('#js-menu-button').click(function () {
         $('.navigation-menu').toggle();
     });
+	
     $(window).scroll(function () {
         if (window.scrollY < 50 && window.innerWidth > 778) {
-            $('.navigation').css({
-                'background': 'transparent'
-            });
+            $('.navigation').css({'background': 'transparent'});
             return;
         }
         else {
-            $('.navigation').css({
-                'background': 'rgba(0,0,0,0.75)'
-            });
+            $('.navigation').css({'background': 'rgba(0,0,0,0.75)'});
         }
-               if($(this).scrollTop() > 600)    $('#js-pageTop').fadeIn(100);
-               else $('#js-pageTop').fadeOut(100);
-    });
-// });//ready// javascript code 
+	   if($(this).scrollTop() > 600)   $('#js-pageTop').fadeIn(100);
+	   else $('#js-pageTop').fadeOut(100);
+    }); //scroll
+ });//ready;;// javascript code 
 	var bars = document.getElementsByClassName('js-percent-loading');
 	var labels = document.getElementsByClassName('js-label');
 //Procedury funkcji 

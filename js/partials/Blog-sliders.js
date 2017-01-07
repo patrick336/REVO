@@ -92,7 +92,7 @@ $(function() {
 		// Pobieramy ilość zdjęć aktywnego slajdu,można swobodnie dodawać zdjęcia.
 		var imageLength = data.slider[nrSlider].position.length;
 		//Sprawdzamy warunek brzegowy i wywołujemy funkcję
-		if (pos > imageLength- 1) pos=0;
+		if (pos > imageLength- 1) { pos=0; }
 		//Obiekt obrazu, nr slajdu, pozycja w danym slajdzie
 		fades($element,nrSlider,pos);
 	}
@@ -108,7 +108,7 @@ $(function() {
 		// Pobieramy ilość zdjęć aktywnego slajdu,można swobodnie dodawać zdjęcia.
 		var imageLength = data.slider[nrSlider].position.length;
 		//Sprawdzamy warunek brzegowy i wywołujemy funkcję
-		if (pos < 0) pos = imageLength - 1;
+		if (pos < 0) { pos = imageLength - 1; }
 		//Obiekt obrazu, nr slajdu, pozycja w danym slajdzie
 		fades($element,nrSlider,pos);
 	}
@@ -124,7 +124,7 @@ $(function() {
 		var imgTitle = data.slider[nrSlider].position[pos].title;
 		var imgAlt = data.slider[nrSlider].position[pos].alt;
 		
-		//Tworzymy kod nowego obrazka,obiekt jest już w pamięci podręcznej
+		//Tworzymy kod nowego obrazka
 		var newImage = $('<img>',{
 			src: imgPath,
 			title: imgTitle,
@@ -149,7 +149,7 @@ $(function() {
 	setImage();
 
 
-///////////////   Nasłuchiwanie zdarzeń ////////////////////////////
+//   Nasłuchiwanie zdarzeń 
 	$('.next').click(nextSlide);
 	$('.prev').click(prevSlide);
 	

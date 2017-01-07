@@ -1,4 +1,4 @@
-//jQuery(function ($) {
+jQuery(function ($) {
         //zresetowanie scrolla
         $.scrollTo(0);
 
@@ -34,19 +34,16 @@
 	$('#js-menu-button').click(function () {
         $('.navigation-menu').toggle();
     });
+	
     $(window).scroll(function () {
         if (window.scrollY < 50 && window.innerWidth > 778) {
-            $('.navigation').css({
-                'background': 'transparent'
-            });
+            $('.navigation').css({'background': 'transparent'});
             return;
         }
         else {
-            $('.navigation').css({
-                'background': 'rgba(0,0,0,0.75)'
-            });
+            $('.navigation').css({'background': 'rgba(0,0,0,0.75)'});
         }
-               if($(this).scrollTop() > 600)    $('#js-pageTop').fadeIn(100);
-               else $('#js-pageTop').fadeOut(100);
-    });
-// });//ready
+	   if($(this).scrollTop() > 600)   $('#js-pageTop').fadeIn(100);
+	   else $('#js-pageTop').fadeOut(100);
+    }); //scroll
+ });//ready
