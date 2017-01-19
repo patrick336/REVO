@@ -8,6 +8,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Opis w Google" />
 	<meta name="keywords" content="słowa, kluczowe, wypisane, po, porzecinku" />
+	<link rel="icon" type="image/png" href="http://images/favicomatics/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="http://images/favicomatics/favicon-16x16.png" sizes="16x16" />
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="./css/main.css">
 </head>
@@ -19,8 +21,10 @@
 				<div class="col col-sm-3">
 					<div class="logo"><span>re</span>vo studio</div>
 				</div>
-				<button type="button" id="js-menu-button" class="hamburger"><i class="fa fa-bars"></i></button>
+				<button type="button" id="js-menu-button" class="hamburger"></button>
 				<div class="col col-sm-9">
+<!--						<input type="checkbox" id="js-menu-button">-->
+<!--            			<label class="hamburger" for="js-menu-button"><i class="fa fa-bars"></i></label>-->
 					<ul class="navigation-menu">
 						<li><a href="#" id="js-home">home</a></li>
 						<li><a href="#" id="js-about">about</a></li>
@@ -59,6 +63,8 @@
 				<p class="main-paragraphs">The difference between a Designer and Developer when it comes to design skills,
 				is the difference between shooting a bullet and throwing it. </p>
 			</div>
+		</div>
+		<div class="container">
 			<div class="row">
 				<div class="col col-sm-4">
 					<div class="icon-wrapper">
@@ -114,12 +120,12 @@
 						<div class="circle circle-2"></div>
 						<div class="circle circle-3"></div>
 					</div>
-					<div class="btn-groups" id="js-category">
-						<button id="js-btnAll" type="button" class="btn btn-custom-3">all</button>
-						<button id="js-btnPhoto" type="button" class="btn btn-custom-3">photography</button>
-						<button id="js-btnWebDesign" type="button" class="btn btn-custom-3">web design</button>
-						<button id="js-btnWebDevelopment" type="button" class="btn btn-custom-3">web development</button>
-						<button id="js-btnGraphic" type="button" class="btn btn-custom-3">graphic</button>
+					<div id="js-category">
+						<button type="button" class="btn btn-custom-3 active">all</button>
+						<button type="button" class="btn btn-custom-3">photography</button>
+						<button type="button" class="btn btn-custom-3">web design</button>
+						<button type="button" class="btn btn-custom-3">web development</button>
+						<button type="button" class="btn btn-custom-3">graphic</button>
 					</div>
 				</div>
 			</div>
@@ -128,102 +134,102 @@
 	<!--    OUR GALLERY-->
 	<section class="gallery" id="gallery">
 		<div class="row">
-			<div class="col col-sm-3">
+			<div class="col col-xs-6 col-lg-3">
 				<div class="portfolio-item" category="photography">
 					<div class="portfolio-cover">
 						<div class="portfolio-text">
-							<h4 class="headers">stationary design</h4>
+							<h5 class="headers">Photography's Trends</h5>
 						</div>
 					</div>
-					<img src="./images/compressed/slices/Desktop/slice-1.jpg">
+					<img src="./images/compressed/slices/Desktop/slice-1.png">
 				</div>
 			</div>
-			<div class="col col-sm-6">
+			<div class="col col-lg-6">
 				<div class="row">
 					<div class="col col-sm-6">
 						<div class="portfolio-item" category="graphic">
 							<div class="portfolio-cover">
 								<div class="portfolio-text">
-									<h4 class="headers">stationary design</h4>
+									<h5 class="headers">Our graphics</h5>
 								</div>
 							</div>
-							<img src="./images/compressed/slices/Desktop/slice-2.jpg" >
+							<img src="./images/compressed/slices/Desktop/slice-2.png" >
 						</div>
 					</div>
 					<div class="col col-sm-6">
 						<div class="portfolio-item" category="photography">
 							<div class="portfolio-cover">
 								<div class="portfolio-text">
-									<h4 class="headers">stationary design</h4>
+									<h5 class="headers">Photography's Trends</h5>
 								</div>
 							</div>
-							<img src="./images/compressed/slices/Desktop/slice-3.jpg">
+							<img src="./images/compressed/slices/Desktop/slice-3.png">
 						</div>
 					</div>
 				</div>
 				<div class="row">
-					<div class="col col-sm-12">
+					<div class="col">
 						<div class="portfolio-item" category="webdesign">
 							<div class="portfolio-cover">
 								<div class="portfolio-text">
-									<h4 class="headers">stationary design</h4>
+									<h5 class="headers">stationary design</h5>
 								</div>
 							</div>
-							<img src="./images/compressed/slices/Desktop/slice-5.jpg">
+							<img src="./images/compressed/slices/Desktop/slice-5.png">
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col col-sm-3">
+			<div class="col col-xs-6 col-lg-3">
 				<div class="portfolio-item" category="photography">
 					<div class="portfolio-cover">
 						<div class="portfolio-text">
-							<h4 class="headers">stationary design</h4>
+							<h5 class="headers">Photography's Trends</h5>
 						</div>
 					</div>
-					<img src="./images/compressed/slices/Desktop/slice-4.jpg">
+					<img src="./images/compressed/slices/Desktop/slice-4.png">
 				</div>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col col-xs-6 col-sm-3">
+			<div class="col col-sm-6 col-lg-3">
 				<div class="portfolio-item" category="graphic">
 					<div class="portfolio-cover">
 						<div class="portfolio-text">
-							<h4 class="headers">stationary design</h4>
+							<h5 class="headers">Our Graphics</h5>
 						</div>
 					</div>
-						<img src="./images/compressed/slices/Desktop/slice-6.jpg">
+						<img src="./images/compressed/slices/Desktop/slice-6.png">
 				</div>
 			</div>
-			<div class="col col-xs-6 col-sm-3">
+			<div class="col col-sm-6 col-lg-3">
 				<div class="portfolio-item" category="webdevelopment">
 					<div class="portfolio-cover">
 						<div class="portfolio-text">
-							<h4 class="headers">stationary design</h4>
+							<h5 class="headers">web development</h5>
 						</div>
 					</div>
-					<img src="./images/compressed/slices/Desktop/slice-7.jpg">
+					<img src="./images/compressed/slices/Desktop/slice-7.png">
 				</div>
 			</div>
-			<div class="col col-xs-6 col-sm-3">
+			<div class="col col-sm-6 col-lg-3">
 				<div class="portfolio-item" category="webdevelopment">
 					<div class="portfolio-cover">
 						<div class="portfolio-text">
-							<h4 class="headers">stationary design</h4>
+							<h5 class="headers">stationary design</h5>
 						</div>
 					</div>
-					<img src="./images/compressed/slices/Desktop/slice-8.jpg">
+					<img src="./images/compressed/slices/Desktop/slice-8.png">
 				</div>
 			</div>
-			<div class="col col-xs-6 col-sm-3">
+			<div class="col col-sm-6 col-lg-3">
 				<div class="portfolio-item" category="webdesign">
 					<div class="portfolio-cover">
 						<div class="portfolio-text">
-							<h4 class="headers">stationary design</h4>
+							<h5 class="headers">web development</h5>
 						</div>
 					</div>
-					<img src="./images/compressed/slices/Desktop/slice-6.jpg">
+					<img src="./images/compressed/slices/Desktop/slice-6.png">
 				</div>
 			</div>
 		</div>
@@ -533,7 +539,7 @@
 		</div>
 		<div class="container">
 			<div class="row">
-				<div class="col col-md-4">
+				<div class="col col-sm-4">
 					<div class="offer">
 						<div class="top-content">
 							<h5>standard plan</h5>
@@ -548,11 +554,11 @@
 								<li>25 MySQL Databases</li>
 								<li>Unlimited Subdomains</li>
 							</ol>
+							<button type="button" class="btn btn-custom-1">order now</button>
 						</div>
-						<button type="button" class="btn btn-custom-1">order now</button>
 					</div>
 				</div>
-				<div class="col col-md-4">
+				<div class="col col-sm-4">
 					<div class="offer">
 						<div class="top-content">
 							<h5>ultimated plan</h5>
@@ -567,11 +573,11 @@
 								<li>25 MySQL Databases</li>
 								<li>Unlimited Subdomains</li>
 							</ol>
+							<button type="button" class="btn btn-custom-1">order now</button>
 						</div>
-						<button type="button" class="btn btn-custom-1">order now</button>
 					</div>
 				</div>
-				<div class="col col-md-4">
+				<div class="col col-sm-4">
 					<div class="offer">
 						<div class="top-content">
 							<h5>standard plan</h5>
@@ -586,8 +592,8 @@
 								<li>25 MySQL Databases</li>
 								<li>Unlimited Subdomains</li>
 							</ol>
+							<button type="button" class="btn btn-custom-1">order now</button>
 						</div>
-						<button type="button" class="btn btn-custom-1">order now</button>
 					</div>
 				</div>
 			</div>
@@ -613,7 +619,7 @@
 		</div>
 		<div class="container">
 			<div class="row">
-				<div class="col col-md-4">
+				<div class="col col-sm-4">
 					<div class="blog-sliders">
 						<img src="./images/compressed/sliders-images/photo-1.jpeg" title="" alt="">
 						<div class="tag">
@@ -629,7 +635,7 @@
 						<a href="javascript:void(0)" class="btn-read-more">read more <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
 					</div>
 				</div>
-				<div class="col col-md-4">
+				<div class="col col-sm-4">
 					<div class="blog-sliders">
 						<img src="./images/compressed/sliders-images/photo-4.jpeg" title="" alt="">
 							<div class="tag">
@@ -645,7 +651,7 @@
 						<a href="javascript:void(0)" class="btn-read-more">read more <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
 					</div>
 				</div>
-				<div class="col col-md-4">
+				<div class="col col-sm-4">
 					<div class="blog-sliders">
 					<img src="./images/compressed/sliders-images/photo-7.jpeg" title="" alt="">
 						<div class="tag">

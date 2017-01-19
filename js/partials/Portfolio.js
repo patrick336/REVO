@@ -1,82 +1,102 @@
-//Buttons
-var btnAssign = document.getElementById("js-category");
-var btnCategory = btnAssign.querySelectorAll("button"); // getElementsByName equivalent
 
-//Categories
-var btnAll = document.getElementById('js-btnAll');
-var btnphoto = document.getElementById('js-btnPhoto');
-var btnWebDesign = document.getElementById('js-btnWebDesign');
-var btnWebDevelopment = document.getElementById('js-btnWebDevelopment');
-var btnGraphic = document.getElementById('js-btnGraphic');
+
+//Buttons
+var btnAssign = document.querySelector("#js-category");
+var btnCategory = btnAssign.querySelectorAll("button"); // getElementsByName equivalent
 
 var gallery = document.getElementById('gallery');
 var project = gallery.querySelectorAll('.portfolio-item');
 var cover = gallery.querySelectorAll('.portfolio-cover');
 
 
-// usuwa klasę active ze wszystkich przycisków
-function resetBtn() {
- 	
-	var nameClass = /(?:^|\s)active(?!\S)/g; 
+for (var i = 0 , size = btnCategory.length ; i < size ; i++) {
 
-	for (var i = 0 ; i < btnCategory.length ; i++ ) {
+	btnCategory[i].addEventListener('click',function(evt){
+		removeActiveState();
+		this.className += ' active';
+		setCategory(evt.target.getAttribute('category'));
+	});
+}
+
+
+// usuwa klasę active ze wszystkich przycisków
+function removeActiveState() {
+
+	var nameClass = /(?:^|\s)active(?!\S)/g;
+
+	for (var i = 0 , size = btnCategory.length ; i < size ; i++ ) {
 		btnCategory[i].className = btnCategory[i].className.replace(nameClass,'');
 	}
 }
 
 function setCategory (category) {
-	
+
 	var test="";
 	category = category.toUpperCase();
-	
-	
 
-	for(var i = 0; i < project.length ; i++) {	
-		 
+
+	for(var i = 0, size = project.length; i < size; i++) {
+
 		test = project[i].getAttribute("category");
 		test = test.toUpperCase();
+
+		if(category == test || category == 'ALL') {
+
+			project[i].className = project[i].className.replace( /(?:^|\s)fade(?!\S)/g , '' );
+			cover[i].style.display = 'block';
+		 }
+		 else {
+
+	 		project[i].className += ' fade';
+			cover[i].style.display = 'none';
+		 }
+	}
+}
+
+function setCategoriesBtn () {
+
+	var categories = ['All','Photography','WebDesign','WebDevelopment','Graphic'];
+
+	categories.map(function(item, index) {
+		btnCategory[index].setAttribute('category',item);
+	});
+
+}
+
+// Nasłuchiwanie zdarzeń
+window.addEventListener('load',setCategoriesBtn,false);
+// Archiwum
+
 
 	 // 	var isAppliedClassFadeIn,isAppliedClassFadeOut  = false;
 
 		// if (project[i].className.match(/(?:^|\s)fadeInEffect(?!\S)/))  isAppliedClassFadeIn = true;
 		// if (project[i].className.match(/(?:^|\s)fadeOutEffect(?!\S)/))  isAppliedClassFadeOut = true;
 
-		if(category == test) {
-		 	// pokazywane elementu na ekranie
-		 	// project[i].className = project[i].className.replace(/\s*fadeOutEffect\s*/, ' fadeInEffect ');
-		}
-		else {
-
-		}
-	}
-}
 
 
+// function fadeOUT(element) {
+//     var op = 1;  // initial opacity
+//     var timer = setInterval(function () {
+//         if (op <= 0.2){
+//             clearInterval(timer);
+//             element.style.opacity = op;
+//         }
+//         element.style.opacity = op;
+//         element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+//         op -= op * 0.5;
+//     }, 0.1);
+// }
 
-//Nasłuchiwanie zdarzeń 
-	btnAll.addEventListener('click',function(){ 
-	resetBtn();	
-	this.className += ' active';
-	//kod pokazujacy wszystkie elementy
-	});
-	btnphoto.addEventListener('click',function(){
-	resetBtn();	
-	this.className += ' active';
-	setCategory('Photography');
-	});
-	btnWebDesign.addEventListener('click',function(){ 
-		resetBtn();	
-		this.className += ' active';
-		setCategory('WebDesign');
-	});
-	btnWebDevelopment.addEventListener('click',function(){
-		resetBtn();	
-		this.className += ' active'; 
-		setCategory('WebDevelopment');
-	});
-	btnGraphic.addEventListener('click',function(){ 
-		resetBtn();	
-		this.className += ' active';
-		setCategory('Graphic');
-	});
-
+// function fadeIN(element) {
+//     var op = 0.1;  // initial opacity
+//     // element.style.display = 'block';
+//     var timer = setInterval(function () {
+//         if (op >= 1){
+//             clearInterval(timer);
+//         }
+//         element.style.opacity = op;
+//         element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+//         op += op * 0.5;
+//     }, 0.1);
+// }

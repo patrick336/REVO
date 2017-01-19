@@ -1,7 +1,7 @@
 
 $(function() {
 
-// Informacje o zdjęciach 
+// Informacje o zdjęciach
 	var data =  {
 
 	"slider" : [
@@ -65,9 +65,8 @@ $(function() {
 	]
 };
 
-	$('.blog-sliders').css({ height: '320px'});
 	$('.caption').show();
-	
+
 	function setSlider() {
 		var temp = $('.blog-sliders');
 		temp.each(function (index, value) {
@@ -94,7 +93,7 @@ $(function() {
 		//Sprawdzamy warunek brzegowy i wywołujemy funkcję
 		if (pos > imageLength- 1) { pos=0; }
 		//Obiekt obrazu, nr slajdu, pozycja w danym slajdzie
-		fades($element,nrSlider,pos);
+		fade($element,nrSlider,pos);
 	}
 	function prevSlide() {
 		//Aktualna pozycja na ekranie
@@ -110,9 +109,9 @@ $(function() {
 		//Sprawdzamy warunek brzegowy i wywołujemy funkcję
 		if (pos < 0) { pos = imageLength - 1; }
 		//Obiekt obrazu, nr slajdu, pozycja w danym slajdzie
-		fades($element,nrSlider,pos);
+		fade($element,nrSlider,pos);
 	}
-	
+
 //Aby uzyskać efekt 'przenikania' zdjęć,należy selektorowi img dla tej sekcji nadać pozycję absolutną, minusem jest to,że traci się
 //responsywność zdjęcia, rozwiązaniem jest nadanie wysokości i szerokości dla różnych szerokości ekranu
 	function fades($element,nrSlider,pos) {
@@ -123,7 +122,7 @@ $(function() {
 		var imgPath = data.slider[nrSlider].position[pos].src;
 		var imgTitle = data.slider[nrSlider].position[pos].title;
 		var imgAlt = data.slider[nrSlider].position[pos].alt;
-		
+
 		//Tworzymy kod nowego obrazka
 		var newImage = $('<img>',{
 			src: imgPath,
@@ -135,29 +134,45 @@ $(function() {
 		newImage.hide();
 		// Dodajemy nowy obraz do modelu DOM
 		$('.blog-sliders').eq(nrSlider).prepend(newImage);
-		//Stopniowo wyświetlamy nowy obrazek.		
+		//Stopniowo wyświetlamy nowy obrazek.
 		newImage.fadeIn(700);
 		//Stopniowo wygaszamy stary obrazek i usuwamy go z DOM.
 		oldImage.fadeOut(700, function () {
 			$(this).remove();
 		});
 	}
-	
-// Wywołanie funkcji
 
+	// Podmiana zdjecia, bez żadnego efektu
+	function fade ($element,nrSlider,pos) {
+
+		var imgPath = data.slider[nrSlider].position[pos].src;
+		var imgTitle = data.slider[nrSlider].position[pos].title;
+		var imgAlt = data.slider[nrSlider].position[pos].alt;
+
+
+		$element.fadeOut(500,function(){
+
+			$(this).attr({
+
+				src: imgPath,
+				title: imgTitle,
+				alt: imgAlt,
+				'indexImage': pos
+			});
+		}).fadeIn(500);
+
+	}
+
+
+
+// Wywołanie funkcji
 	setSlider();
 	setImage();
 
-
-//   Nasłuchiwanie zdarzeń 
+//   Nasłuchiwanie zdarzeń
 	$('.next').click(nextSlide);
 	$('.prev').click(prevSlide);
-	
-	
-	
+
+
+
 }); //ready
-
-
-
-
-

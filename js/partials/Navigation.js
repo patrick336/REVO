@@ -9,32 +9,32 @@ jQuery(function ($) {
 		$('#js-portfolio').click(function (e) {
             e.preventDefault();
             $.scrollTo($('#portfolio'), 1000);
-        });       
+        });
 		$('#js-blog').click(function (e) {
             e.preventDefault();
             $.scrollTo($('#blog'), 1000);
-        });       
+        });
 		$('#js-contact').click(function (e) {
             e.preventDefault();
             $.scrollTo($('#contact'), 1000);
         });
         $('#js-pageTop').click(function (e) {
             e.preventDefault();
-            $.scrollTo($('#page-top'), 1200);
-        });        
+            $.scrollTo($('#page-top'), 1500);
+        });
 		$('#js-home').click(function (e) {
             e.preventDefault();
-            $.scrollTo($('#page-top'), 1200);
+            $.scrollTo($('#page-top'), 1500);
         });
         $('#js-pages').click(function (e) {
             e.preventDefault();
             $.scrollTo($('#pages'), 1000);
-        }); 
-  
-	$('#js-menu-button').click(function () {
-        $('.navigation-menu').toggle();
-    });
-	
+        });
+
+	$('#js-menu-button').on('click',function(evt){
+		$('.navigation-menu').toggle();
+	});
+
     $(window).scroll(function () {
         if (window.scrollY < 50 && window.innerWidth > 778) {
             $('.navigation').css({'background': 'transparent'});

@@ -17,11 +17,25 @@
 	font-family: $Ubuntu; 
 } 
 
+//#js-menu-button {
+//	
+//	display: none;
+//	
+//	&:not(:checked)~.navigation-menu {
+//		display: none;
+//	}
+//        
+//	&:checked~.navigation-menu {
+//            display: block;
+//	}
+//}
+
+
 .navigation { 
 	font-weight: 900; 
 	color: $white; 
 	background: rgba(0, 0, 0, 0.75); 
-	min-height: 60px; 
+	min-height: 60px;
 	
 	@media #{$S} { background: transparent;}
 }
@@ -65,10 +79,18 @@
 	right: 15px; 
 	border: none;
 	background: inherit; 
-	font-weight: 900; 
 	cursor: pointer;
 	color: $white;
 	@include icon-ctrl(30px,20px);
+	
+	&:after {
+		content: "\f0c9";
+		display: inline-block;
+    	font: normal normal normal 14px/1 FontAwesome;
+    	font-size: inherit;
+    	text-rendering: auto;
+    	-webkit-font-smoothing: antialiased;
+	} 
 	
 	@media #{$S} {display: none;}
 }

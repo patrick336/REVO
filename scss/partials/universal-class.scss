@@ -36,7 +36,7 @@ section .container {
 
 	@media #{$XS} {
 	  margin: 0 auto;
-	  padding: 60px 0;
+	  padding: 50px 0;
 	}
 }
 
@@ -106,7 +106,7 @@ ul,ol {
 // PATTERN
 
 .pattern  {
-	margin: 50px auto 20px ;
+	margin: 30px auto;
 	display: block ;
 	width: 63px ;
 	position: relative ;
@@ -236,14 +236,11 @@ ul,ol {
 	}
 }//pg-top
 
-
 .fadeInEffect {
-//	opacity: 0;
+	opacity: 0;
 	@include keyframe(fadeIn){
-  		0% {
-			opacity: .2;
-		}
-		100% {
+
+		to {
 			opacity: 1;
 		}
 	}
@@ -251,15 +248,16 @@ ul,ol {
 }
 
 .fadeOutEffect {
-//	opacity: 0;
+	opacity: 1;
 	@include keyframe(fadeOut){
-  		0% {
-			opacity: 1;
-		}
-		100% {
+		to {
 			opacity: .2;
 		}
 	}
 	@include animation (fadeOut,.3s,linear,0s,forwards,running);
+}
+
+.is-paused {
+	@include animation-play-state ('paused');
 }
 

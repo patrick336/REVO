@@ -29,6 +29,8 @@
 }
 
 @mixin trans($property, $duration, $effect) {
+    -ms-transition:  $property $duration $effect;
+    -o-transition: $property $duration $effect;
     -moz-transition: $property $duration $effect;
     -webkit-transition: $property $duration $effect;
     transition: $property $duration $effect;
@@ -55,8 +57,12 @@
     -o-animation: $animation $duration $timing $delay $fill-mode $play-state;
     animation: $animation $duration $timing $delay $fill-mode $play-state;
 }
-
-
+@mixin animation-play-state ($play-state) {
+    -webkit-animation-play-state: $play-state;
+    -moz-animation-play-state: $play-state;
+    -o-animation-play-state: $play-state;
+    animation-play-state: $play-state;
+}
 //grid - not used yet
 
 @mixin smartphone {
@@ -79,3 +85,4 @@
     @content;
   }
 }
+

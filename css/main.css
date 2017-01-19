@@ -27,7 +27,7 @@ section .container {
   @media screen and (min-width: 480px) {
     section .container {
       margin: 0 auto;
-      padding: 60px 0; } }
+      padding: 50px 0; } }
 
 [class*="col"] {
   min-height: 1px;
@@ -80,7 +80,7 @@ ul, ol {
       font-size: 15px; } }
 
 .pattern {
-  margin: 50px auto 20px;
+  margin: 30px auto;
   display: block;
   width: 63px;
   position: relative;
@@ -160,6 +160,8 @@ ul, ol {
   padding: 10px;
   margin: 30px auto;
   font-weight: 700;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
@@ -172,6 +174,8 @@ ul, ol {
   background: #fff;
   color: #000;
   margin: 0 auto;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
@@ -206,6 +210,8 @@ ul, ol {
   width: 30px;
   line-height: 30px;
   font-size: 17px;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
@@ -217,64 +223,56 @@ ul, ol {
     color: #67d5b5; }
 
 .fadeInEffect {
+  opacity: 0;
   -webkit-animation: fadeIn 1s linear 0s forwards running;
   -moz-animation: fadeIn 1s linear 0s forwards running;
   -o-animation: fadeIn 1s linear 0s forwards running;
   animation: fadeIn 1s linear 0s forwards running; }
 
 @-webkit-keyframes fadeIn {
-  0% {
-    opacity: .2; }
-  100% {
+  to {
     opacity: 1; } }
 
 @-moz-keyframes fadeIn {
-  0% {
-    opacity: .2; }
-  100% {
+  to {
     opacity: 1; } }
 
 @-o-keyframes fadeIn {
-  0% {
-    opacity: .2; }
-  100% {
+  to {
     opacity: 1; } }
 
 @keyframes fadeIn {
-  0% {
-    opacity: .2; }
-  100% {
+  to {
     opacity: 1; } }
 
 .fadeOutEffect {
+  opacity: 1;
   -webkit-animation: fadeOut 0.3s linear 0s forwards running;
   -moz-animation: fadeOut 0.3s linear 0s forwards running;
   -o-animation: fadeOut 0.3s linear 0s forwards running;
   animation: fadeOut 0.3s linear 0s forwards running; }
 
 @-webkit-keyframes fadeOut {
-  0% {
-    opacity: 1; }
-  100% {
+  to {
     opacity: .2; } }
 
 @-moz-keyframes fadeOut {
-  0% {
-    opacity: 1; }
-  100% {
+  to {
     opacity: .2; } }
 
 @-o-keyframes fadeOut {
-  0% {
-    opacity: 1; }
-  100% {
+  to {
     opacity: .2; } }
 
 @keyframes fadeOut {
-  0% {
-    opacity: 1; }
-  100% {
+  to {
     opacity: .2; } }
+
+.is-paused {
+  -webkit-animation-play-state: "paused";
+  -moz-animation-play-state: "paused";
+  -o-animation-play-state: "paused";
+  animation-play-state: "paused"; }
 
 .sticky {
   position: fixed;
@@ -324,6 +322,8 @@ ul, ol {
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
     text-transform: capitalize;
+    -ms-transition: all 0.1s linear;
+    -o-transition: all 0.1s linear;
     -moz-transition: all 0.1s linear;
     -webkit-transition: all 0.1s linear;
     transition: all 0.1s linear; }
@@ -334,13 +334,19 @@ ul, ol {
   right: 15px;
   border: none;
   background: inherit;
-  font-weight: 900;
   cursor: pointer;
   color: #fff;
   height: 30px;
   width: 30px;
   line-height: 30px;
   font-size: 20px; }
+  .hamburger:after {
+    content: "\f0c9";
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased; }
   @media screen and (min-width: 768px) {
     .hamburger {
       display: none; } }
@@ -411,7 +417,7 @@ ul, ol {
   .icon-wrapper p {
     font-size: 13px;
     word-wrap: break-word;
-    line-height: 1.5; }
+    line-height: 1.7; }
     @media screen and (min-width: 480px) {
       .icon-wrapper p {
         font-size: 14px; } }
@@ -425,25 +431,46 @@ ul, ol {
 .portfolio-item {
   position: relative;
   overflow: hidden;
-  cursor: pointer; }
+  cursor: pointer;
+  -ms-transition: opacity 0.5s ease-out;
+  -o-transition: opacity 0.5s ease-out;
+  -moz-transition: opacity 0.5s ease-out;
+  -webkit-transition: opacity 0.5s ease-out;
+  transition: opacity 0.5s ease-out; }
   .portfolio-item .portfolio-text {
     position: relative;
-    color: #fff; }
+    color: #fff;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #fff;
+    width: 80%;
+    max-width: 300px;
+    margin: 0 auto;
+    top: 35%;
+    font-size: 16px; }
+    @media screen and (min-width: 768px) {
+      .portfolio-item .portfolio-text {
+        font-size: 17px; } }
+  .portfolio-item h5 {
+    margin: 0; }
   .portfolio-item .portfolio-cover {
+    height: 60%;
+    max-height: 250px;
     bottom: -100%;
-    left: 10%;
-    right: 10%;
+    left: 15%;
+    right: 15%;
     overflow: hidden;
     position: absolute;
-    height: 30%;
-    max-height: 100px;
-    width: 80%;
-    -moz-transition: all 0.4s ease-in-out;
-    -webkit-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -webkit-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
     background-color: rgba(103, 213, 181, 0.85); }
   .portfolio-item:hover > .portfolio-cover, .portfolio-item:focus > .portfolio-cover {
-    bottom: 0%; }
+    bottom: 20%; }
+
+.fade {
+  opacity: 0.2; }
 
 .creative-design {
   background-color: #f0f5f9;
@@ -776,6 +803,8 @@ ul, ol {
   background-color: transparent;
   border: 2px solid #fff;
   cursor: pointer;
+  -ms-transition: background-color 1s ease;
+  -o-transition: background-color 1s ease;
   -moz-transition: background-color 1s ease;
   -webkit-transition: background-color 1s ease;
   transition: background-color 1s ease;
@@ -797,6 +826,8 @@ ul, ol {
     font-size: 14px;
     margin: 0; }
   .offer button {
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out; }
@@ -868,8 +899,7 @@ ul, ol {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     -ms-border-radius: 3px;
-    border-radius: 3px;
-    position: absolute; }
+    border-radius: 3px; }
   .blog-sliders:hover .next, .blog-sliders:focus .next {
     opacity: 1; }
   .blog-sliders:hover .prev, .blog-sliders:focus .prev {
@@ -900,6 +930,8 @@ ul, ol {
   width: 40px;
   line-height: 40px;
   font-size: 24px;
+  -ms-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
   -moz-transition: all 0.6s ease;
   -webkit-transition: all 0.6s ease;
   transition: all 0.6s ease;
@@ -1095,6 +1127,8 @@ footer {
     padding: 5px 10px;
     font-size: 12px;
     max-width: 200px;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
